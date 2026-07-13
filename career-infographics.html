@@ -2,1279 +2,324 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Career Infographics | ICCC Resource Bank</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<title>Career Infographics</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
-        body{
-            background:#f8fafc;
-            font-family:Inter,system-ui,-apple-system,sans-serif;
-        }
+<style>
 
-        .sidebar-active{
-            background:#0369a1;
-            color:#fff;
-        }
+body{
+    margin:0;
+    font-family:Inter,Arial,sans-serif;
+    background:#f4f7fb;
+}
 
-        .card-shadow{
-            box-shadow:0 4px 10px rgba(0,0,0,.08);
-        }
+/* HEADER */
 
-        .stat-card{
-            transition:.2s;
-        }
+.header{
+    height:70px;
+    background:#fff;
+    border-bottom:1px solid #e5e7eb;
 
-        .stat-card:hover{
-            transform:translateY(-3px);
-        }
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-    </style>
+    padding:0 40px;
+}
+
+.header img{
+    height:34px;
+}
+
+.header nav a{
+
+    text-decoration:none;
+    color:#8b97ab;
+
+    font-size:15px;
+    font-weight:600;
+
+    margin-left:42px;
+}
+
+.header nav a:hover{
+    color:#0b73b9;
+}
+
+
+/* LAYOUT */
+
+.dashboard{
+
+    display:flex;
+
+    height:calc(100vh - 70px);
+}
+
+
+/* SIDEBAR */
+
+.sidebar{
+
+    width:255px;
+
+    background:#fff;
+
+    border-right:1px solid #e5e7eb;
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.profile{
+
+    padding:18px;
+
+    border-bottom:1px solid #ececec;
+}
+
+.profile select{
+
+    width:100%;
+
+    padding:10px 14px;
+
+    border:1px solid #d9d9d9;
+
+    border-radius:8px;
+
+    background:white;
+
+    font-size:15px;
+}
+
+/* MENU */
+
+.menu{
+
+    list-style:none;
+
+    padding:14px 0;
+
+    margin:0;
+}
+
+.menu li{
+
+    margin:4px 12px;
+}
+
+.menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:#2f4057;
+
+    padding:12px 14px;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    transition:.2s;
+}
+
+.menu a:hover{
+
+    background:#f5f8fb;
+}
+
+.menu .active{
+
+    background:#0b73b9;
+
+    color:white;
+
+    font-weight:600;
+}
+
+/* COACHAPRENEUR CARD */
+
+.promo{
+
+    margin:auto 16px 18px;
+
+    background:#0b73b9;
+
+    color:white;
+
+    border-radius:14px;
+
+    text-align:center;
+
+    padding:28px 18px;
+}
+
+.promo h3{
+
+    margin-top:0;
+
+    font-size:18px;
+}
+
+.promo p{
+
+    font-size:14px;
+
+    line-height:1.5;
+}
+
+.promo button{
+
+    margin-top:14px;
+
+    background:white;
+
+    color:#0b73b9;
+
+    border:none;
+
+    padding:10px 22px;
+
+    border-radius:8px;
+
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+/* MAIN CONTENT */
+
+.main{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:34px 36px;
+}
+
+</style>
 
 </head>
 
-<body class="flex min-h-screen">
+<body>
 
-<!-- ========================================================= -->
-<!-- LEFT SIDEBAR                                               -->
-<!-- ========================================================= -->
 
-<aside class="w-64 bg-white border-r border-gray-200 flex flex-col shrink-0">
+<!-- HEADER -->
 
-    <!-- User -->
+<header class="header">
 
-    <div class="p-4 border-b">
+    <img src="https://mindlerimages.imgix.net/iccc_new/mindler-big-blue.png">
 
-        <div class="flex justify-between items-center border rounded-lg px-3 py-2">
+    <nav>
 
-            <span class="text-sm font-medium text-gray-700">
+        <a href="index.html">HOME</a>
 
-                Sree Varsha
+        <a href="#">FAQs</a>
 
-            </span>
-
-            <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
-
-        </div>
-
-    </div>
-
-
-    <!-- Navigation -->
-
-    <nav class="flex-1 py-4">
-
-        <ul class="space-y-1 px-3">
-
-            <li>
-                <a href="#"
-                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
-
-                    <i class="fa-regular fa-circle-dot text-[#0077b6]"></i>
-
-                    <span class="text-sm">
-
-                        ICCC Foundation
-
-                    </span>
-
-                </a>
-            </li>
-
-            <li>
-
-                <a href="#"
-                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
-
-                    <i class="fa-regular fa-folder-open text-[#0077b6]"></i>
-
-                    <span class="text-sm">
-
-                        Foundation Resources
-
-                    </span>
-
-                </a>
-
-            </li>
-
-            <li>
-
-                <a href="#"
-                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
-
-                    <i class="fa-regular fa-circle-dot text-[#0077b6]"></i>
-
-                    <span class="text-sm">
-
-                        ICCC Advanced
-
-                    </span>
-
-                </a>
-
-            </li>
-
-            <li>
-
-                <a href="#"
-                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
-
-                    <i class="fa-regular fa-circle-dot text-[#0077b6]"></i>
-
-                    <span class="text-sm">
-
-                        Coachapreneur Program
-
-                    </span>
-
-                </a>
-
-            </li>
-
-            <li>
-
-                <a href="#"
-                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
-
-                    <i class="fa-solid fa-earth-asia text-[#0077b6]"></i>
-
-                    <span class="text-sm">
-
-                        ICCC Overseas
-
-                    </span>
-
-                </a>
-
-            </li>
-
-            <li>
-
-                <a href="#"
-                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
-
-                    <i class="fa-solid fa-earth-asia text-[#0077b6]"></i>
-
-                    <span class="text-sm">
-
-                        ICCC Master
-
-                    </span>
-
-                </a>
-
-            </li>
-
-            <!-- NEW TAB -->
-
-            <li>
-
-                <a href="#"
-                    class="sidebar-active flex items-center gap-3 px-3 py-2 rounded-md">
-
-                    <i class="fa-solid fa-book-open"></i>
-
-                    <span class="text-sm font-semibold">
-
-                        Resource Bank
-
-                    </span>
-
-                </a>
-
-            </li>
-
-            <li>
-
-                <a href="#"
-                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
-
-                    <i class="fa-solid fa-clipboard-list text-[#0077b6]"></i>
-
-                    <span class="text-sm">
-
-                        Take Assessment
-
-                    </span>
-
-                </a>
-
-            </li>
-
-        </ul>
-
-
-        <!-- CTA -->
-
-        <div class="px-4 mt-8">
-
-            <div class="bg-[#0077b6] rounded-xl p-6 text-white text-center">
-
-                <h3 class="font-bold text-lg">
-
-                    Become a Coachapreneur
-
-                </h3>
-
-                <p class="text-xs opacity-90 mt-2">
-
-                    Combine ICCC Advanced and Mindler Partner for unbeatable career coaching success.
-
-                </p>
-
-                <button
-                    class="mt-4 bg-white text-[#0077b6] rounded px-5 py-2 text-sm font-semibold">
-
-                    Learn More
-
-                </button>
-
-            </div>
-
-        </div>
+        <a href="#">CONTACT</a>
 
     </nav>
 
-</aside>
-
-<!-- ========================================================= -->
-<!-- MAIN CONTENT                                                -->
-<!-- ========================================================= -->
-
-<div class="flex-1 flex flex-col">
-
-<header
-class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-8">
-
-<div>
-
-<img
-src="https://mindlerimages.imgix.net/iccc_new/mindler-big-blue.png"
-class="h-8">
-
-</div>
-
-<nav class="flex gap-8">
-
-<a href="#"
-class="text-sm font-semibold uppercase tracking-wider text-gray-400">
-
-HOME
-
-</a>
-
-<a href="#"
-class="text-sm font-semibold uppercase tracking-wider text-gray-400">
-
-FAQs
-
-</a>
-
-<a href="#"
-class="text-sm font-semibold uppercase tracking-wider text-gray-400">
-
-CONTACT
-
-</a>
-
-</nav>
-
 </header>
 
-<main class="flex-1 overflow-y-auto p-8">
-<div class="mb-6">
 
-    <!-- Back Button -->
+<!-- DASHBOARD -->
 
-    <a href="index.html"
-       class="inline-flex items-center gap-2 text-[#0077b6] font-medium hover:underline">
+<div class="dashboard">
 
-        <i class="fa-solid fa-arrow-left"></i>
 
-        Back to Resource Bank
+<!-- SIDEBAR -->
 
-    </a>
+<aside class="sidebar">
 
-</div>
+    <div class="profile">
 
-<div class="flex justify-between items-start mb-8">
+        <select>
 
-    <!-- LEFT COLUMN -->
+            <option>Sree Varsha</option>
 
-    <div class="flex-1">
+        </select>
 
-        <!-- Breadcrumb -->
+    </div>
 
-        <div class="flex items-center text-sm text-gray-400 mb-3">
 
-            <a href="index.html" class="hover:text-[#0077b6]">
-                Home
-            </a>
+    <ul class="menu">
 
-            <span class="mx-2">></span>
+        <li><a href="#"><i class="fa-regular fa-circle"></i> ICCC Foundation</a></li>
 
-            <a href="index.html" class="hover:text-[#0077b6]">
+        <li><a href="#"><i class="fa-solid fa-folder"></i> Foundation Resources</a></li>
+
+        <li><a href="#"><i class="fa-regular fa-circle"></i> ICCC Advanced</a></li>
+
+        <li><a href="#"><i class="fa-regular fa-circle"></i> Coachapreneur Program</a></li>
+
+        <li><a href="#"><i class="fa-solid fa-earth-asia"></i> ICCC Overseas</a></li>
+
+        <li><a href="#"><i class="fa-solid fa-earth-asia"></i> ICCC Master</a></li>
+
+        <li>
+
+            <a class="active" href="index.html">
+
+                <i class="fa-solid fa-book-open"></i>
+
                 Resource Bank
+
             </a>
 
-            <span class="mx-2">></span>
+        </li>
 
-            <span class="text-[#0077b6] font-semibold">
-                Career Infographics
-            </span>
+        <li><a href="#"><i class="fa-solid fa-clipboard-list"></i> Take Assessment</a></li>
 
-        </div>
+    </ul>
 
-        <h1 class="text-4xl font-bold text-gray-900 mb-3">
 
-            Career Infographics
+    <div class="promo">
 
-        </h1>
+        <h3>Become a Coachapreneur</h3>
 
-        <p class="text-lg text-gray-600 leading-8 max-w-4xl">
+        <p>
 
-            Browse ready-to-use career infographics designed to simplify career counselling conversations and visualize career pathways.
+            Combine ICCC Advanced and Mindler Partner for unbeatable career coaching success.
 
         </p>
 
-    </div>
-
-    <!-- RIGHT COLUMN -->
-
-    <div class="bg-white border border-gray-200 rounded-2xl shadow-sm px-8 py-5 text-center ml-8 mt-8">
-
-        <p class="text-xs uppercase tracking-wider text-gray-500">
-
-            Total Resources
-
-        </p>
-
-        <p class="text-5xl font-bold text-[#0077b6] mt-2">
-
-            19
-
-        </p>
+        <button>Learn More</button>
 
     </div>
 
-</div>
+</aside>
 
-<!-- SEARCH -->
 
-<div class="flex gap-4 mb-8">
 
-    <input
-            id="careerSearch"
+<!-- MAIN -->
 
-        type="text"
-        placeholder="Search careers..."
-        class="flex-1 rounded-lg border border-gray-300 px-5 py-3">
+<main class="main">
 
-<select id="sortSelect"
-        class="w-24 rounded-xl border border-gray-300 px-4 py-3 bg-white">
+<!-- Part 2 starts here -->
 
-    <option value="az">A-Z</option>
-    <option value="za">Z-A</option>
-
-</select>
-
-</div>
-
-<!-- QUICK STATS -->
-
-
-
-<!-- ========================================================= -->
-<!-- RESOURCE GRID STARTS HERE                                  -->
-<!-- ========================================================= -->
-
-<!-- ========================================================= -->
-<!-- UX DESIGN -->
-<!-- ========================================================= -->
-<div id="careerGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-<div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-    <!-- Header -->
-
-    <div class="flex items-start justify-between mb-5">
-
-        <div class="flex items-center gap-3">
-
-            <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-
-                <i class="fa-solid fa-desktop text-xl text-[#0077b6]"></i>
-
-            </div>
-
-            <div>
-
-                <span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">
-
-                    Technology
-
-                </span>
-
-                <h3 class="text-xl font-bold text-gray-800 mt-1">
-
-                    UX Design
-
-                </h3>
-
-            </div>
-
-        </div>
-
-        <span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-
-            INFOGRAPHIC
-
-        </span>
-
-    </div>
-
-    <!-- Description -->
-
-    <p class="text-sm text-gray-600 leading-6 flex-grow">
-
-        Explore the UX Design journey, key skills, career pathways, job roles and future opportunities through an easy-to-understand visual guide.
-
-    </p>
-
-    <!-- Divider -->
-
-    <div class="border-t border-gray-100 my-5"></div>
-
-    <!-- Button -->
-
-    <button
-        onclick="window.open('https://drive.google.com/file/d/1GG6ijsweP-xYb0bdG938rrSCS5c_sfqj/view?usp=drive_link','_blank')"
-        class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-        Open Infographic
-
-        <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-    </button>
-
-</div>
-<div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-
-<i class="fa-solid fa-trophy text-xl text-[#0077b6]"></i>
-
-</div>
-
-<div>
-
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">ATHLETICS</span>
-
-<h3 class="text-xl font-bold text-gray-800 mt-1">Sports</h3>
-
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-
-INFOGRAPHIC
-
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-
-Discover careers in sports, coaching, fitness, sports management and emerging opportunities in the global sports industry.
-
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/10pDbPzqaK8LEdG2d0N5LfdAi7SMETdrm/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-
-<i class="fa-solid fa-brain text-xl text-[#0077b6]"></i>
-
-</div>
-
-<div>
-
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">HEALTHCARE</span>
-
-<h3 class="text-xl font-bold text-gray-800 mt-1">Psychology</h3>
-
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-
-INFOGRAPHIC
-
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-
-Explore psychology careers, specializations, counselling pathways and opportunities in behavioural science.
-
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/1xO20qiAFn7pfxpDNhkI8md_6iy8-Viqq/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-user-doctor text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">HEALTHCARE</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Medicine</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Understand medical education pathways, specializations, clinical careers and opportunities across the healthcare industry.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/1GtXAsTtoK36K4IlTePuSE2cGjD596Mre/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-scale-balanced text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">LEGAL</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Law</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Explore careers in litigation, corporate law, judiciary, legal consulting and public policy through this visual guide.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/13y04ulhjVh0axdRl56n5wAbEQTvmXKyI/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-hotel text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">HOSPITALITY</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Hotel Management</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Learn about hospitality careers, hotel operations, tourism management and global opportunities in the service industry.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/1v9Gl9bzL7p5rf1DTBrJVE4G7wDIRZY8c/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-palette text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">CREATIVE</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Graphic Design</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Discover careers in branding, visual communication, UI graphics, illustration and digital design across creative industries.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/1cMIwB9loYgxs5K2hnlpZsroiu8i7Lzxs/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-gamepad text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">TECHNOLOGY</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Game Development</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Explore careers in game design, programming, animation, storytelling and interactive entertainment.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/1RUr2WqKndp9CWUU1B82xbrghtQhDXUDl/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-shirt text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">CREATIVE</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Fashion Design</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Learn about careers in fashion design, apparel production, styling, merchandising and luxury brands.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/1sy5M0YDc3quam6D2-hpKUwr9l9rEH6_Y/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-rocket text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">BUSINESS</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Entrepreneurship</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Learn how entrepreneurs identify opportunities, build businesses, secure funding and scale successful ventures.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/19UKJTwh65k4BakjEln8yQtHFKu_Wa7SG/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-graduation-cap text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">ACADEMICS</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Education</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Explore careers in teaching, curriculum design, educational leadership and learning technologies.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/1O-eAP_qQPJ-yTSU6Tkj2qukQrl1B0sBb/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-bullhorn text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">MARKETING</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Digital Marketing</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Discover careers in SEO, content marketing, social media, paid advertising and digital brand strategy.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/1J1w5iLImDEukJeI-hz4cH7IgwuxENNkH/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-chart-line text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">TECHNOLOGY</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Data Science</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Explore careers in data analytics, machine learning, business intelligence and data-driven decision making.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/1C8A_MTET1btiNF6ixxJoV8IevHkFAynk/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-shield-halved text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">TECHNOLOGY</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Cybersecurity</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Learn about careers in ethical hacking, digital security, cyber defence, network protection and information security.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/1pONtd4rFtQ7GLVv_AM_nOsaAPmWRStS2/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-calculator text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">FINANCE</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Chartered Accountancy</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Understand the CA qualification pathway, auditing, taxation, financial reporting and corporate finance careers.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/1XPrzJA2I5ZDQcPfsvRUUU3QMzxgA4AXg/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-plane-departure text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">AVIATION</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Aviation</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Explore careers in commercial aviation, airport operations, aircraft maintenance and aviation management.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/1jSYjDefTYWsUu-snNpyuvKCRyoIZ0ZvN/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-robot text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">TECHNOLOGY</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Artificial Intelligence</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Learn about careers in AI, machine learning, intelligent systems and the future of emerging technologies.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/1cOay8NtQR2xONLttgx-3DgVEyZeTOOdr/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-compass-drafting text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">DESIGN</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Architecture</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Discover careers in architecture, urban planning, sustainable design and construction project development.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/1tilPxQcEU2ADmeBMfaSqWgDle8TbVKmD/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
-
-<div class="flex items-start justify-between mb-5">
-
-<div class="flex items-center gap-3">
-
-<div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-film text-xl text-[#0077b6]"></i>
-</div>
-
-<div>
-<span class="career-category text-[11px] uppercase tracking-wider text-gray-400 font-semibold">CREATIVE</span>
-<h3 class="text-xl font-bold text-gray-800 mt-1">Animation & VFX</h3>
-</div>
-
-</div>
-
-<span class="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">
-INFOGRAPHIC
-</span>
-
-</div>
-
-<p class="text-sm text-gray-600 leading-6 flex-grow">
-Explore careers in animation, visual effects, 3D design, motion graphics and digital storytelling.
-</p>
-
-<div class="border-t border-gray-100 my-5"></div>
-
-<button
-onclick="window.open('https://drive.google.com/file/d/17mHE2B2I23GQkPA_TloSsN-wOqrd4Z6B/view?usp=drive_link','_blank')"
-class="w-full rounded-lg bg-[#0077b6] hover:bg-[#005d8f] text-white py-3 font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-
-Open Infographic
-<i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
-
-</button>
-
-</div>
-    </div>
-<div id="noResults"
-     class="hidden text-center py-16">
-
-    <i class="fa-solid fa-magnifying-glass text-5xl text-gray-300 mb-4"></i>
-
-    <h3 class="text-xl font-semibold text-gray-700">
-        No career infographics found
-    </h3>
-
-    <p class="text-gray-500 mt-2">
-        Try searching with another keyword.
-    </p>
-
-</div>
-<!-- ========================================================= -->
-<!-- RESOURCE GRID ENDS HERE                                  -->
-<!-- ========================================================= -->
-
-</div>
 </main>
+
+
 </div>
-<script>   let visibleCards = 0;
-    const searchInput = document.getElementById("careerSearch");
-const sortSelect = document.getElementById("sortSelect");
-const careerGrid = document.getElementById("careerGrid");
 
-function filterCards() {
+</body>
 
-    const searchTerm = searchInput.value.toLowerCase().trim();
-
-    const cards = careerGrid.querySelectorAll(".career-card");
-
-    cards.forEach(card => {
-
-        const title = card.querySelector("h3").innerText.toLowerCase();
-        const category = card.querySelector(".career-category").innerText.toLowerCase();
-
-        const searchableText = title + " " + category;
-
-        if (searchableText.includes(searchTerm)) {
-card.style.display = "flex";
-visibleCards++;        } else {
-            card.style.display = "none";
-        }
-
-    });
-
-}
-const noResults = document.getElementById("noResults");
-
-if (visibleCards === 0) {
-    noResults.classList.remove("hidden");
-} else {
-    noResults.classList.add("hidden");
-}
-function sortCards() {
-
-    const cards = Array.from(careerGrid.querySelectorAll(".career-card"));
-
-    cards.sort((a, b) => {
-
-        const nameA = a.querySelector("h3").innerText.trim();
-        const nameB = b.querySelector("h3").innerText.trim();
-
-        if (sortSelect.value === "za") {
-            return nameB.localeCompare(nameA);
-        }
-
-        return nameA.localeCompare(nameB);
-
-    });
-
-    cards.forEach(card => careerGrid.appendChild(card));
-
-}
-
-searchInput.addEventListener("keyup", filterCards);
-
-sortSelect.addEventListener("change", () => {
-
-    sortCards();
-    filterCards();
-
-});
-
-sortCards();</script></body>
 </html>
