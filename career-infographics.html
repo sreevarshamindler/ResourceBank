@@ -1211,8 +1211,10 @@ searchInput.addEventListener("keyup", function () {
 
     careerCards.forEach(card => {
 
-        const cardText = card.innerText.toLowerCase();
+const title = card.querySelector("h3").innerText.toLowerCase();
+const category = card.querySelector(".career-category").innerText.toLowerCase();
 
+const cardText = title + " " + category;
         if (cardText.includes(searchTerm)) {
 
             card.style.display = "flex";
