@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ICCC Resource Bank Dashboard</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        body{
+            background:#f8fafc;
+            font-family:Inter,system-ui,-apple-system,sans-serif;
+        }
+
+        .sidebar-active{
+            background:#0369a1;
+            color:#fff;
+        }
+
+        .card-shadow{
+            box-shadow:0 4px 10px rgba(0,0,0,.08);
+        }
+
+        .stat-card{
+            transition:.2s;
+        }
+
+        .stat-card:hover{
+            transform:translateY(-3px);
+        }
+
+    </style>
+
+</head>
+
+<body class="flex min-h-screen">
+
+<!-- ========================================================= -->
+<!-- LEFT SIDEBAR                                               -->
+<!-- ========================================================= -->
+
+<aside class="w-64 bg-white border-r border-gray-200 flex flex-col shrink-0">
+
+    <!-- User -->
+
+    <div class="p-4 border-b">
+
+        <div class="flex justify-between items-center border rounded-lg px-3 py-2">
+
+            <span class="text-sm font-medium text-gray-700">
+
+                Sree Varsha
+
+            </span>
+
+            <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+
+        </div>
+
+    </div>
+
+
+    <!-- Navigation -->
+
+    <nav class="flex-1 py-4">
+
+        <ul class="space-y-1 px-3">
+
+            <li>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
+
+                    <i class="fa-regular fa-circle-dot text-[#0077b6]"></i>
+
+                    <span class="text-sm">
+
+                        ICCC Foundation
+
+                    </span>
+
+                </a>
+            </li>
+
+            <li>
+
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
+
+                    <i class="fa-regular fa-folder-open text-[#0077b6]"></i>
+
+                    <span class="text-sm">
+
+                        Foundation Resources
+
+                    </span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
+
+                    <i class="fa-regular fa-circle-dot text-[#0077b6]"></i>
+
+                    <span class="text-sm">
+
+                        ICCC Advanced
+
+                    </span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
+
+                    <i class="fa-regular fa-circle-dot text-[#0077b6]"></i>
+
+                    <span class="text-sm">
+
+                        Coachapreneur Program
+
+                    </span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
+
+                    <i class="fa-solid fa-earth-asia text-[#0077b6]"></i>
+
+                    <span class="text-sm">
+
+                        ICCC Overseas
+
+                    </span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
+
+                    <i class="fa-solid fa-earth-asia text-[#0077b6]"></i>
+
+                    <span class="text-sm">
+
+                        ICCC Master
+
+                    </span>
+
+                </a>
+
+            </li>
+
+            <!-- NEW TAB -->
+
+            <li>
+
+                <a href="#"
+                    class="sidebar-active flex items-center gap-3 px-3 py-2 rounded-md">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <span class="text-sm font-semibold">
+
+                        Resource Bank
+
+                    </span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
+
+                    <i class="fa-solid fa-clipboard-list text-[#0077b6]"></i>
+
+                    <span class="text-sm">
+
+                        Take Assessment
+
+                    </span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+
+        <!-- CTA -->
+
+        <div class="px-4 mt-8">
+
+            <div class="bg-[#0077b6] rounded-xl p-6 text-white text-center">
+
+                <h3 class="font-bold text-lg">
+
+                    Become a Coachapreneur
+
+                </h3>
+
+                <p class="text-xs opacity-90 mt-2">
+
+                    Combine ICCC Advanced and Mindler Partner for unbeatable career coaching success.
+
+                </p>
+
+                <button
+                    class="mt-4 bg-white text-[#0077b6] rounded px-5 py-2 text-sm font-semibold">
+
+                    Learn More
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</aside>
+
+<!-- ========================================================= -->
+<!-- MAIN CONTENT                                                -->
+<!-- ========================================================= -->
+
+<div class="flex-1 flex flex-col">
+
+<header
+class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-8">
+
+<div>
+
+<img
+src="https://mindlerimages.imgix.net/iccc_new/mindler-big-blue.png"
+class="h-8">
+
+</div>
+
+<nav class="flex gap-8">
+
+<a href="#"
+class="text-sm font-semibold uppercase tracking-wider text-gray-400">
+
+HOME
+
+</a>
+
+<a href="#"
+class="text-sm font-semibold uppercase tracking-wider text-gray-400">
+
+FAQs
+
+</a>
+
+<a href="#"
+class="text-sm font-semibold uppercase tracking-wider text-gray-400">
+
+CONTACT
+
+</a>
+
+</nav>
+
+</header>
+
+<!-- BEGIN: MainSidebar -->
+<aside class="w-64 bg-white border-r border-gray-200 flex flex-col shrink-0" data-purpose="primary-sidebar">
+<!-- User Profile Selection -->
+<div class="p-4 border-b border-gray-100">
+<div class="flex items-center justify-between p-2 rounded border border-gray-200 cursor-pointer">
+<span class="text-sm font-medium text-gray-700">Sree Varsha</span>
+<i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex-1 overflow-y-auto py-4">
+<ul class="space-y-1 px-3"><li class=""><a class="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-md transition-colors" href="#"><i class="fa-regular fa-circle text-[#0077b6]"></i><span class="text-sm">ICCC Foundation</span></a></li><li class=""><a class="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-md transition-colors" href="#"><i class="fa-solid fa-folder-open text-[#0077b6]"></i><span class="text-sm">Foundation Resources</span></a></li><li class=""><a class="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-md transition-colors" href="#"><i class="fa-solid fa-circle-nodes text-[#0077b6]"></i><span class="text-sm">ICCC Advanced</span></a></li><li class=""><a class="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-md transition-colors" href="#"><i class="fa-solid fa-circle-nodes text-[#0077b6]"></i><span class="text-sm">Coachapreneur Program</span></a></li><li class=""><a class="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-md transition-colors" href="#"><i class="fa-solid fa-circle-nodes text-[#0077b6]"></i><span class="text-sm">ICCC Overseas</span></a></li><li class=""><a class="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-md transition-colors" href="#"><i class="fa-solid fa-circle-nodes text-[#0077b6]"></i><span class="text-sm">ICCC Master</span></a></li><li class=""><a class="flex items-center gap-3 px-3 py-2 sidebar-active rounded-md" href="#"><i class="fa-solid fa-book-open"></i><span class="text-sm font-semibold">Resource Bank</span></a></li><li class=""><a class="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-md transition-colors" href="#"><i class="fa-solid fa-pen-to-square text-[#0077b6]"></i><span class="text-sm">Take Assessment</span></a></li></ul>
+<!-- CTA Banner -->
+<div class="mt-8 px-4">
+<div class="bg-[#0077b6] rounded-xl p-6 text-white text-center">
+<h3 class="font-bold text-lg leading-tight mb-2">Become a Coachapreneur</h3>
+<p class="text-xs opacity-90 mb-4">Combine ICCC Advanced and Mindler Partner for unbeatable career coaching success!</p>
+<button class="bg-white text-[#0077b6] px-6 py-2 rounded font-bold text-sm hover:bg-blue-50 transition-colors">Learn More</button>
+</div>
+</div>
+</nav>
+</aside>
+<!-- END: MainSidebar -->
+<!-- Main Content Area -->
+</div>
+</body>
+</html>
