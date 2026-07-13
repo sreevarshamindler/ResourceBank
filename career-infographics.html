@@ -380,8 +380,8 @@ CONTACT
         placeholder="Search careers..."
         class="flex-1 rounded-lg border border-gray-300 px-5 py-3">
 
-  <select id="sortSelect"
-    class="rounded-xl border border-gray-300 px-5 py-3 bg-white">
+<select id="sortSelect"
+        class="w-24 rounded-xl border border-gray-300 px-4 py-3 bg-white">
 
     <option value="az">A-Z</option>
     <option value="za">Z-A</option>
@@ -401,7 +401,7 @@ CONTACT
 <!-- ========================================================= -->
 <!-- UX DESIGN -->
 <!-- ========================================================= -->
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<div id="careerGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
 <div class="career-card bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col p-6">
 
     <!-- Header -->
@@ -1199,35 +1199,62 @@ Open Infographic
 </div>
 </main>
 </div>
-    <script>
+   const searchInput = document.getElementById("careerSearch");
+const sortSelect = document.getElementById("sortSelect");
+const careerGrid = document.getElementById("careerGrid");
 
-const searchInput = document.getElementById("careerSearch");
-const careerCards = document.querySelectorAll(".career-card");
+function filterCards() {
 
-searchInput.addEventListener("keyup", function () {
+    const searchTerm = searchInput.value.toLowerCase().trim();
 
-    const searchTerm = this.value.toLowerCase().trim();
+    const cards = careerGrid.querySelectorAll(".career-card");
 
-    careerCards.forEach(card => {
+    cards.forEach(card => {
 
-const title = card.querySelector("h3").innerText.toLowerCase();
-const category = card.querySelector(".career-category").innerText.toLowerCase();
+        const title = card.querySelector("h3").innerText.toLowerCase();
+        const category = card.querySelector(".career-category").innerText.toLowerCase();
 
-const cardText = title + " " + category;
-        if (cardText.includes(searchTerm)) {
+        const searchableText = title + " " + category;
 
+        if (searchableText.includes(searchTerm)) {
             card.style.display = "flex";
-
         } else {
-
             card.style.display = "none";
-
         }
 
     });
 
+}
+
+function sortCards() {
+
+    const cards = Array.from(careerGrid.querySelectorAll(".career-card"));
+
+    cards.sort((a, b) => {
+
+        const nameA = a.querySelector("h3").innerText.trim();
+        const nameB = b.querySelector("h3").innerText.trim();
+
+        if (sortSelect.value === "za") {
+            return nameB.localeCompare(nameA);
+        }
+
+        return nameA.localeCompare(nameB);
+
+    });
+
+    cards.forEach(card => careerGrid.appendChild(card));
+
+}
+
+searchInput.addEventListener("keyup", filterCards);
+
+sortSelect.addEventListener("change", () => {
+
+    sortCards();
+    filterCards();
+
 });
 
-</script>
-</body>
+sortCards();</body>
 </html>
