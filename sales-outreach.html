@@ -637,7 +637,7 @@ outline:none;
 </div>
  <!-- Career Cards -->
 
-<div id="careerGrid" class="career-grid"></div>
+<div id="resourceGrid"></div>
     
 
 </main>
@@ -752,6 +752,32 @@ function renderCards(list){
     });
 
 }
+    renderCards(resources);
+
+document.getElementById("resourceCount").textContent = resources.length;
+    document.getElementById("careerSearch").addEventListener("input", function(){
+
+    const keyword = this.value.trim().toLowerCase();
+
+    if(keyword.length < 3){
+
+        renderCards(resources);
+        return;
+    }
+
+    const filtered = resources.filter(resource =>
+
+        resource.title.toLowerCase().includes(keyword) ||
+
+        resource.description.toLowerCase().includes(keyword) ||
+
+        resource.includes.join(" ").toLowerCase().includes(keyword)
+
+    );
+
+    renderCards(filtered);
+
+});
 </script>
 </body>
 
