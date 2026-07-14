@@ -871,6 +871,25 @@ function renderCards(list){
 renderCards(careers);
 
 document.getElementById("resourceCount").textContent = careers.length;
+    const searchBox = document.getElementById("careerSearch");
+
+searchBox.addEventListener("input", function(){
+
+    const keyword = this.value.toLowerCase();
+
+    const filtered = careers.filter(career =>
+
+        career.title.toLowerCase().includes(keyword) ||
+
+        career.category.toLowerCase().includes(keyword) ||
+
+        career.description.toLowerCase().includes(keyword)
+
+    );
+
+    renderCards(filtered);
+
+});
 
 </script>
 </body>
