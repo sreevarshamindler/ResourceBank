@@ -229,7 +229,36 @@ body{
 
     padding:30px 40px;
 }
+.stat-card{
 
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:16px;
+
+    padding:24px;
+
+    box-shadow:0 4px 14px rgba(0,0,0,.05);
+}
+
+.stat-title{
+
+    font-size:15px;
+
+    color:#6b7280;
+
+    margin-bottom:10px;
+}
+
+.stat-number{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#0072bc;
+}
 </style>
 
 </head>
@@ -355,8 +384,100 @@ body{
 
 <main class="main">
 
-<!-- Part 2 goes here -->
+<main class="main">
 
+<!-- PAGE HEADER -->
+
+<h1 style="
+margin:0;
+font-size:31px;
+font-weight:700;
+color:#17233c;
+">
+    Resource Bank
+</h1>
+
+<p style="
+margin-top:14px;
+margin-bottom:28px;
+font-size:16px;
+line-height:1.7;
+color:#44546f;
+max-width:760px;
+">
+    Your all-in-one toolkit for confidently guiding students toward the right careers. Access presentations, templates, tools and counselling resources—all in one place.
+</p>
+
+
+<!-- SEARCH -->
+
+<div style="
+display:flex;
+margin-bottom:30px;
+">
+
+<input
+id="resourceSearch"
+type="text"
+placeholder="Search resources..."
+
+style="
+width:100%;
+padding:14px 20px;
+font-size:17px;
+border:1px solid #cfd7e3;
+border-radius:12px;
+outline:none;
+">
+
+</div>
+
+
+<!-- STATS -->
+
+<div style="
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
+margin-bottom:34px;
+">
+
+<div class="stat-card">
+    <div class="stat-title">Resources</div>
+    <div class="stat-number">145</div>
+</div>
+
+<div class="stat-card">
+    <div class="stat-title">Categories</div>
+    <div class="stat-number">6</div>
+</div>
+
+<div class="stat-card">
+    <div class="stat-title">Infographics</div>
+    <div class="stat-number">19</div>
+</div>
+
+<div class="stat-card">
+    <div class="stat-title">Templates</div>
+    <div class="stat-number">42</div>
+</div>
+
+</div>
+
+
+<!-- RESOURCE GRID START -->
+
+<div id="resourceGrid" style="
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:28px;
+">
+
+<!-- Resource Cards go here -->
+
+</div>
+
+</main>
 </main>
 
 </div>
