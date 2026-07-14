@@ -818,9 +818,13 @@ const careers = [
 
 const careerGrid = document.getElementById("careerGrid");
 
-careers.forEach(career=>{
+function renderCards(list){
 
-careerGrid.innerHTML += `
+    careerGrid.innerHTML = "";
+
+    list.forEach(career=>{
+
+        careerGrid.innerHTML += `
 
 <div class="career-card">
 
@@ -833,18 +837,13 @@ careerGrid.innerHTML += `
             </div>
 
             <div class="card-category">
-
                 <small>${career.category}</small>
-
                 <h3>${career.title}</h3>
-
             </div>
 
         </div>
 
-        <span class="badge">
-            INFOGRAPHIC
-        </span>
+        <span class="badge">INFOGRAPHIC</span>
 
     </div>
 
@@ -852,13 +851,11 @@ careerGrid.innerHTML += `
         ${career.description}
     </div>
 
-
     <button
         class="card-button"
         onclick="window.open('${career.link}','_blank')">
 
         Open Infographic
-
         <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
     </button>
@@ -866,8 +863,14 @@ careerGrid.innerHTML += `
 </div>
 
 `;
+
+    });
+
+}
+
+renderCards(careers);
+
 document.getElementById("resourceCount").textContent = careers.length;
-});
 
 </script>
 </body>
