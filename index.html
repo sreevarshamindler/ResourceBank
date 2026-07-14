@@ -2,776 +2,365 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ICCC Resource Bank Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<title>ICCC Resource Bank</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
-        body{
-            background:#f8fafc;
-            font-family:Inter,system-ui,-apple-system,sans-serif;
-        }
+<style>
 
-        .sidebar-active{
-            background:#0369a1;
-            color:#fff;
-        }
+body{
+    margin:0;
+    font-family:Inter,Arial,sans-serif;
+    background:#f4f7fb;
+}
 
-        .card-shadow{
-            box-shadow:0 4px 10px rgba(0,0,0,.08);
-        }
+/* ================= HEADER ================= */
 
-        .stat-card{
-            transition:.2s;
-        }
+.header{
 
-        .stat-card:hover{
-            transform:translateY(-3px);
-        }
+    height:70px;
 
-    </style>
+    background:#fff;
+
+    border-bottom:1px solid #e5e7eb;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 40px;
+}
+
+.header img{
+
+    height:34px;
+}
+
+.header nav a{
+
+    text-decoration:none;
+
+    color:#8b97ab;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-left:42px;
+}
+
+.header nav a:hover{
+
+    color:#0b73b9;
+}
+
+
+/* ================= LAYOUT ================= */
+
+.dashboard{
+
+    display:flex;
+
+    height:calc(100vh - 70px);
+
+    overflow:hidden;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+
+    width:275px;
+
+    background:#fff;
+
+    border-right:1px solid #e5e7eb;
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.profile{
+
+    padding:18px;
+
+    border-bottom:1px solid #ececec;
+
+    font-weight:500;
+
+    color:#2f4057;
+}
+
+.menu{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:14px 0;
+}
+
+.menu li{
+
+    margin:4px 12px;
+}
+
+.menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:#2f4057;
+
+    padding:12px 14px;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    transition:.2s;
+}
+
+.menu a:hover{
+
+    background:#f5f8fb;
+}
+
+.menu .active{
+
+    background:#0b73b9;
+
+    color:white;
+
+    font-weight:600;
+}
+
+.menu-icon-img{
+
+    width:22px;
+
+    height:22px;
+
+    object-fit:contain;
+}
+
+.menu-icon-svg{
+
+    width:20px;
+
+    height:20px;
+
+    fill:#0b73b9;
+}
+
+/* ================= PROMO ================= */
+
+.promo{
+
+    margin:auto 16px 18px;
+
+    background:#0b73b9;
+
+    color:white;
+
+    border-radius:14px;
+
+    text-align:center;
+
+    padding:28px 18px;
+}
+
+.promo h3{
+
+    margin-top:0;
+
+    font-size:18px;
+}
+
+.promo p{
+
+    font-size:14px;
+
+    line-height:1.5;
+}
+
+.promo button{
+
+    margin-top:14px;
+
+    background:white;
+
+    color:#0b73b9;
+
+    border:none;
+
+    padding:10px 22px;
+
+    border-radius:8px;
+
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+/* ================= MAIN ================= */
+
+.main{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:30px 40px;
+}
+
+</style>
 
 </head>
 
-<body class="flex min-h-screen">
+<body>
 
-<!-- ========================================================= -->
-<!-- LEFT SIDEBAR                                               -->
-<!-- ========================================================= -->
+<header class="header">
 
-<aside class="w-64 bg-white border-r border-gray-200 flex flex-col shrink-0">
+    <img src="https://mindlerimages.imgix.net/iccc_new/mindler-big-blue.png">
 
-    <!-- User -->
+    <nav>
 
-    <div class="p-4 border-b">
+        <a href="#">HOME</a>
 
-        <div class="flex justify-between items-center border rounded-lg px-3 py-2">
+        <a href="#">FAQs</a>
 
-            <span class="text-sm font-medium text-gray-700">
-
-                Sree Varsha
-
-            </span>
-
-            <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
-
-        </div>
-
-    </div>
-
-
-    <!-- Navigation -->
-
-    <nav class="flex-1 py-4">
-
-        <ul class="space-y-1 px-3">
-
-            <li>
-                <a href="#"
-                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
-
-                    <i class="fa-regular fa-circle-dot text-[#0077b6]"></i>
-
-                    <span class="text-sm">
-
-                        ICCC Foundation
-
-                    </span>
-
-                </a>
-            </li>
-
-            <li>
-
-                <a href="#"
-                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
-
-                    <i class="fa-regular fa-folder-open text-[#0077b6]"></i>
-
-                    <span class="text-sm">
-
-                        Foundation Resources
-
-                    </span>
-
-                </a>
-
-            </li>
-
-            <li>
-
-                <a href="#"
-                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
-
-                    <i class="fa-regular fa-circle-dot text-[#0077b6]"></i>
-
-                    <span class="text-sm">
-
-                        ICCC Advanced
-
-                    </span>
-
-                </a>
-
-            </li>
-
-            <li>
-
-                <a href="#"
-                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
-
-                    <i class="fa-regular fa-circle-dot text-[#0077b6]"></i>
-
-                    <span class="text-sm">
-
-                        Coachapreneur Program
-
-                    </span>
-
-                </a>
-
-            </li>
-
-            <li>
-
-                <a href="#"
-                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
-
-                    <i class="fa-solid fa-earth-asia text-[#0077b6]"></i>
-
-                    <span class="text-sm">
-
-                        ICCC Overseas
-
-                    </span>
-
-                </a>
-
-            </li>
-
-            <li>
-
-                <a href="#"
-                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
-
-                    <i class="fa-solid fa-earth-asia text-[#0077b6]"></i>
-
-                    <span class="text-sm">
-
-                        ICCC Master
-
-                    </span>
-
-                </a>
-
-            </li>
-
-            <!-- NEW TAB -->
-
-            <li>
-
-                <a href="#"
-                    class="sidebar-active flex items-center gap-3 px-3 py-2 rounded-md">
-
-                    <i class="fa-solid fa-book-open"></i>
-
-                    <span class="text-sm font-semibold">
-
-                        Resource Bank
-
-                    </span>
-
-                </a>
-
-            </li>
-
-            <li>
-
-                <a href="#"
-                    class="flex items-center gap-3 px-3 py-2 rounded-md text-gray-600 hover:bg-gray-50">
-
-                    <i class="fa-solid fa-clipboard-list text-[#0077b6]"></i>
-
-                    <span class="text-sm">
-
-                        Take Assessment
-
-                    </span>
-
-                </a>
-
-            </li>
-
-        </ul>
-
-
-        <!-- CTA -->
-
-        <div class="px-4 mt-8">
-
-            <div class="bg-[#0077b6] rounded-xl p-6 text-white text-center">
-
-                <h3 class="font-bold text-lg">
-
-                    Become a Coachapreneur
-
-                </h3>
-
-                <p class="text-xs opacity-90 mt-2">
-
-                    Combine ICCC Advanced and Mindler Partner for unbeatable career coaching success.
-
-                </p>
-
-                <button
-                    class="mt-4 bg-white text-[#0077b6] rounded px-5 py-2 text-sm font-semibold">
-
-                    Learn More
-
-                </button>
-
-            </div>
-
-        </div>
+        <a href="#">CONTACT</a>
 
     </nav>
 
-</aside>
-
-<!-- ========================================================= -->
-<!-- MAIN CONTENT                                                -->
-<!-- ========================================================= -->
-
-<div class="flex-1 flex flex-col">
-
-<header
-class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-8">
-
-<div>
-
-<img
-src="https://mindlerimages.imgix.net/iccc_new/mindler-big-blue.png"
-class="h-8">
-
-</div>
-
-<nav class="flex gap-8">
-
-<a href="#"
-class="text-sm font-semibold uppercase tracking-wider text-gray-400">
-
-HOME
-
-</a>
-
-<a href="#"
-class="text-sm font-semibold uppercase tracking-wider text-gray-400">
-
-FAQs
-
-</a>
-
-<a href="#"
-class="text-sm font-semibold uppercase tracking-wider text-gray-400">
-
-CONTACT
-
-</a>
-
-</nav>
-
 </header>
 
-<main class="flex-1 overflow-y-auto p-8">
 
-<div class="mb-8">
-
-<h1 class="text-3xl font-bold text-gray-800">
-
-ICCC Resource Bank for Career Coaches
-
-</h1>
-
-<p class="text-gray-500 mt-2 max-w-4xl">
-
-Your all-in-one toolkit to confidently guide students toward the right careers.
-Access presentations, templates, tools, videos and counselling resources —
-all in one place.
-
-</p>
-
-</div>
-
-<!-- SEARCH -->
-
-<div class="mb-8">
-
-<input
-type="text"
-placeholder="Search resources..."
-class="w-full rounded-lg border border-gray-300 px-5 py-3">
-
-</div>
-
-<!-- QUICK STATS -->
-
-<div class="grid grid-cols-2 xl:grid-cols-4 gap-5 mb-10">
-
-<div class="bg-white rounded-xl p-5 stat-card card-shadow">
-
-<p class="text-sm text-gray-500">
-
-Resources
-
-</p>
-
-<h2 class="text-3xl font-bold text-[#0077b6] mt-2">
-
-145
-
-</h2>
-
-</div>
-
-<div class="bg-white rounded-xl p-5 stat-card card-shadow">
-
-<p class="text-sm text-gray-500">
-
-Categories
-
-</p>
-
-<h2 class="text-3xl font-bold text-[#0077b6] mt-2">
-
-6
-
-</h2>
-
-</div>
-
-<div class="bg-white rounded-xl p-5 stat-card card-shadow">
-
-<p class="text-sm text-gray-500">
-
-Templates
-
-</p>
-
-<h2 class="text-3xl font-bold text-[#0077b6] mt-2">
-
-42
-
-</h2>
-
-</div>
-
-<div class="bg-white rounded-xl p-5 stat-card card-shadow">
-
-<p class="text-sm text-gray-500">
-
-Videos
-
-</p>
-
-<h2 class="text-3xl font-bold text-[#0077b6] mt-2">
-
-28
-
-</h2>
-
-</div>
-
-</div>
-
-<!-- ========================================================= -->
-<!-- RESOURCE GRID STARTS HERE                                  -->
-<!-- ========================================================= -->
-
-<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-<div class="bg-white border border-gray-200 rounded-lg overflow-hidden card-shadow hover:border-[#0077b6] transition-all duration-300 flex flex-col">
-
-<div class="p-5 flex flex-col h-full">
-
-<div class="flex items-center gap-3 mb-3">
-
-<div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
-
-<i class="fa-solid fa-chart-simple text-[#0077b6]"></i>
-
-</div>
-
-<h2 class="font-bold text-gray-800">
-
-Career Infographics
-
-</h2>
-
-</div>
-
-<div class="text-sm text-gray-500 leading-6 mb-4">
-
-A handpicked list of trusted platforms for career exploration,
-college websites and planning.
-
-</div>
-
-<p class="text-sm font-semibold text-gray-700 mb-2">
-
-This section contains
-
-</p>
-
-<ul class="text-sm text-gray-500 list-disc ml-5 space-y-1 mb-5">
-
-<li>Career research portals</li>
-
-<li>Scholarship search tools</li>
-
-<li>College comparison resources</li>
-
-<li>Government career websites</li>
-
-</ul>
-
-<a
-href="career-infographics.html"
-class="mt-auto w-full rounded-md bg-[#0077b6]
-hover:bg-[#005d8f]
-text-white
-py-2.5
-font-semibold
-text-sm
-transition-all
-duration-300
-shadow-md
-hover:shadow-lg
-flex
-items-center
-justify-center">
-
-Open Infographics
-
-</a>
-</div>
-
-</div>
-    <!-- Student Tools -->
-
-<div class="bg-white border border-gray-200 rounded-lg overflow-hidden card-shadow hover:border-[#0077b6] transition-all duration-300 flex flex-col">
-
-<div class="p-5 flex flex-col h-full">
-
-<div class="flex items-center gap-3 mb-3">
-
-<div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-screwdriver-wrench text-[#0077b6]"></i>
-</div>
-
-<h2 class="font-bold text-gray-800">
-Student Tools
-</h2>
-
-</div>
-
-<div class="text-sm text-gray-500 leading-6 mb-4">
-
-Curated platforms and digital tools that support students throughout career exploration, college research and decision-making.
-
-</div>
-
-<p class="text-sm font-semibold text-gray-700 mb-2">
-
-This section contains
-
-</p>
-
-<ul class="text-sm text-gray-500 list-disc ml-5 space-y-1 mb-6">
-
-<li>Career exploration tools</li>
-<li>College search platforms</li>
-<li>Course & University finders</li>
-<li>Scholarship resources</li>
-
-</ul>
-
-<button
-
-class="mt-auto w-full rounded-md bg-[#0077b6]
-hover:bg-[#005d8f]
-text-white
-py-2.5
-font-semibold
-text-sm
-transition-all
-duration-300
-shadow-md
-hover:shadow-lg">
-
-Browse Tools
-
-</button>
-
-</div>
-
-</div>
-    <!-- Session Starter Kits -->
-
-<div class="bg-white border border-gray-200 rounded-lg overflow-hidden card-shadow hover:border-[#0077b6] transition-all duration-300 flex flex-col">
-
-<div class="p-5 flex flex-col h-full">
-
-<div class="flex items-center gap-3 mb-3">
-
-<div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-kit-medical text-[#0077b6]"></i>
-</div>
-
-<h2 class="font-bold text-gray-800">
-Session Starter Kits
-</h2>
-
-</div>
-
-<div class="text-sm text-gray-500 leading-6 mb-4">
-
-Ready-to-use materials that help coaches conduct engaging and structured counselling sessions with confidence.
-
-</div>
-
-<p class="text-sm font-semibold text-gray-700 mb-2">
-
-This section contains
-
-</p>
-
-<ul class="text-sm text-gray-500 list-disc ml-5 space-y-1 mb-6">
-
-<li>Session agendas</li>
-<li>Icebreakers & Activities</li>
-<li>Discussion worksheets</li>
-<li>Presentation templates</li>
-
-</ul>
-
-<button
-
-class="mt-auto w-full rounded-md bg-[#0077b6]
-hover:bg-[#005d8f]
-text-white
-py-2.5
-font-semibold
-text-sm
-transition-all
-duration-300
-shadow-md
-hover:shadow-lg">
-
-View Kits
-
-</button>
-
-</div>
-
-</div>
-    <!-- Business Client Docs -->
-
-<div class="bg-white border border-gray-200 rounded-lg overflow-hidden card-shadow hover:border-[#0077b6] transition-all duration-300 flex flex-col">
-
-<div class="p-5 flex flex-col h-full">
-
-<div class="flex items-center gap-3 mb-3">
-
-<div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
-<i class="fa-solid fa-file-contract text-[#0077b6]"></i>
-</div>
-
-<h2 class="font-bold text-gray-800">
-Business Client Docs
-</h2>
-
-</div>
-
-<div class="text-sm text-gray-500 leading-6 mb-4">
-
-Professional documentation and templates required for onboarding clients and managing coaching engagements.
-
-</div>
-
-<p class="text-sm font-semibold text-gray-700 mb-2">
-
-This section contains
-
-</p>
-
-<ul class="text-sm text-gray-500 list-disc ml-5 space-y-1 mb-6">
-
-<li>Client onboarding forms</li>
-<li>Consent forms</li>
-<li>Contracts & Agreements</li>
-<li>Reporting templates</li>
-
-</ul>
-
-<button
-
-class="mt-auto w-full rounded-md bg-[#0077b6]
-hover:bg-[#005d8f]
-text-white
-py-2.5
-font-semibold
-text-sm
-transition-all
-duration-300
-shadow-md
-hover:shadow-lg">
-
-View Documents
-
-</button>
-
-</div>
-
-</div>
-    <!-- Sales & Outreach -->
-
-<div class="bg-white border border-gray-200 rounded-lg overflow-hidden card-shadow hover:border-[#0077b6] transition-all duration-300 flex flex-col">
-
-    <div class="p-5 flex flex-col h-full">
-
-        <div class="flex items-center gap-3 mb-3">
-
-            <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
-
-                <i class="fa-solid fa-bullhorn text-[#0077b6]"></i>
-
-            </div>
-
-            <h2 class="font-bold text-gray-800">
-
-                Sales & Outreach
-
-            </h2>
-
-        </div>
-
-        <div class="text-sm text-gray-500 leading-6 mb-4">
-
-            Ready-to-use resources that help you market your coaching services, nurture leads and grow your counselling practice.
-
-        </div>
-
-        <p class="text-sm font-semibold text-gray-700 mb-2">
-
-            This section contains
+<div class="dashboard">
+
+<aside class="sidebar">
+
+    <div class="profile">
+
+        Sree Varsha
+
+    </div>
+
+    <ul class="menu">
+
+        <li>
+            <a href="#">
+                <img src="https://mindlerimages.imgix.net/iccc_new/ICCC-basic.svg"
+                class="menu-icon-img">
+                ICCC Foundation
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <svg class="menu-icon-svg" viewBox="0 0 512 512">
+                    <path d="M472,16H168a24,24,0,0,0-24,24V344a24,24,0,0,0,24,24H472a24,24,0,0,0,24-24V40A24,24,0,0,0,472,16Zm-8,320H176V48H464Z"></path>
+                    <path d="M112,400V80H80V408a24,24,0,0,0,24,24H432V400Z"></path>
+                    <path d="M48,464V144H16V472a24,24,0,0,0,24,24H368V464Z"></path>
+                </svg>
+                Foundation Resources
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="https://mindlerimages.imgix.net/iccc_new/ICCC-advanced.svg"
+                class="menu-icon-img">
+                ICCC Advanced
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="https://mindlerimages.imgix.net/iccc_new/ICCC-advanced.svg"
+                class="menu-icon-img">
+                Coachapreneur Program
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="https://mindlerimages.imgix.net/iccc_new/ICCC-advanced.svg"
+                class="menu-icon-img">
+                ICCC Overseas
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="https://mindlerimages.imgix.net/iccc_new/ICCC-master.svg"
+                class="menu-icon-img">
+                ICCC Master
+            </a>
+        </li>
+
+        <li>
+            <a class="active" href="#">
+                <i class="fa-solid fa-book-open"></i>
+                Resource Bank
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="https://mindlerimages.imgix.net/iccc_new/ICCC-master.svg"
+                class="menu-icon-img">
+                Take Assessment
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="promo">
+
+        <h3>Become a Coachapreneur</h3>
+
+        <p>
+
+            Combine ICCC Advanced and Mindler Partner for unbeatable career coaching success.
 
         </p>
 
-        <ul class="text-sm text-gray-500 list-disc ml-5 space-y-1 mb-6">
+        <button>
 
-            <li>Sales scripts</li>
-
-            <li>Email templates</li>
-
-            <li>WhatsApp messages</li>
-
-            <li>Social media content</li>
-
-        </ul>
-
-        <button
-
-        class="mt-auto w-full rounded-md bg-[#0077b6]
-        hover:bg-[#005d8f]
-        text-white
-        py-2.5
-        font-semibold
-        text-sm
-        transition-all
-        duration-300
-        shadow-md
-        hover:shadow-lg">
-
-        Access Resources
+            Learn More
 
         </button>
 
     </div>
 
-</div>
+</aside>
 
-    <!-- More Resources -->
+<main class="main">
 
-<div class="bg-white border-2 border-dashed border-gray-300 rounded-lg overflow-hidden transition-all duration-300 flex flex-col hover:border-gray-400">
+<!-- Part 2 goes here -->
 
-    <div class="p-5 flex flex-col h-full">
-
-        <div class="flex items-center gap-3 mb-3">
-
-            <div class="w-10 h-10 rounded-lg bg-yellow-50 flex items-center justify-center">
-
-                <i class="fa-solid fa-star text-yellow-500"></i>
-
-            </div>
-
-            <h2 class="font-bold text-gray-800">
-
-                More Resources
-
-            </h2>
-
-        </div>
-
-        <div class="text-sm text-gray-500 leading-6 mb-4">
-
-            New resources will continue to be added regularly to support career coaches with evolving industry needs.
-
-        </div>
-
-        <p class="text-sm font-semibold text-gray-700 mb-2">
-
-            Planned additions
-
-        </p>
-
-        <ul class="text-sm text-gray-500 list-disc ml-5 space-y-1 mb-6">
-
-            <li>Career videos</li>
-
-            <li>Counselling templates</li>
-
-            <li>Workshop resources</li>
-
-            <li>AI tools for coaches</li>
-
-        </ul>
-
-        <button
-
-        class="mt-auto w-full rounded-md
-        bg-gray-300
-        text-gray-600
-        py-2.5
-        font-semibold
-        text-sm
-        cursor-not-allowed">
-
-        Coming Soon
-
-        </button>
-
-    </div>
-
-</div>
 </main>
+
 </div>
+
 </body>
+
 </html>
