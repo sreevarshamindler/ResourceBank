@@ -868,12 +868,15 @@ function renderCards(list){
 
 }
 
-updateResults();
-document.getElementById("resourceCount").textContent = careers.length;
-    const searchBox = document.getElementById("careerSearch");
+const searchBox = document.getElementById("careerSearch");
 
 searchBox.addEventListener("input", updateResults);
+
 document.getElementById("sortSelect").addEventListener("change", updateResults);
+
+document.getElementById("resourceCount").textContent = careers.length;
+
+updateResults();
 
 function updateResults(){
 
