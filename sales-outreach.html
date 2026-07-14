@@ -60,9 +60,10 @@ body{
 
 .career-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,minmax(0,1fr));
     gap:28px;
-}    
+    width:100%;
+}
 .career-card{
 
     background:#fff;
@@ -170,7 +171,6 @@ body{
     line-height:1.8;
     font-size:16px;
     margin:20px 0;
-    min-height:110px;
 }
 
 
@@ -649,12 +649,12 @@ const resources = [
     icon:"fa-envelope",
     description:"Ready-to-use professional email templates for schools, students, parents, referrals and follow-ups.",
     includes:[
-        "Outreach Emails",
-        "Follow-ups",
-        "Student Replies",
-        "Parent Invites",
-        "Referral Requests",
-        "Testimonials"
+           "School Outreach",
+            "Student Communication",
+            "Parent Communication",
+            "Referrals",
+            "Testimonials"
+
     ],
     link:"email-templates.html"
 },
@@ -710,7 +710,7 @@ function renderCards(list){
 
     </div>
 
-    <div style=" margin-top:20px; flex:1; ">
+    <div style=" margin-top:16px; flex-grow:1; ">
 
         <strong style="
         color:#17233c;
@@ -731,8 +731,7 @@ function renderCards(list){
 
     </div>
 
-    <button
-        class="card-button"
+    <button class="card-button" style="margin-top:auto;"
         onclick="window.location.href='${resource.link}'">
 
         Open Templates
