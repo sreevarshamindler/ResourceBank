@@ -880,7 +880,46 @@ updateResults();
 
 function updateResults(){
 
-    const keyword = searchBox.value.toLowerCase();
+    const keyword = searchBox.value.trim().toLowerCase();
+
+    const shortKeywords = ["ux", "ai", "ca", "vfx"];
+
+if (
+    keyword.length > 0 &&
+    keyword.length < 3 &&
+    !shortKeywords.includes(keyword)
+) {
+    careerGrid.innerHTML = `
+        <div style="
+            grid-column:1/-1;
+            text-align:center;
+            padding:70px 20px;
+            color:#64748b;
+        ">
+            <i class="fa-solid fa-magnifying-glass" style="
+                font-size:42px;
+                color:#cbd5e1;
+                margin-bottom:18px;
+            "></i>
+
+            <h3 style="
+                margin:0;
+                color:#334155;
+                font-size:22px;
+            ">
+                Keep typing...
+            </h3>
+
+            <p style="
+                margin-top:10px;
+                font-size:16px;
+            ">
+                Enter at least 3 characters to search careers.
+            </p>
+        </div>
+    `;
+    return;
+}
     const sort = document.getElementById("sortSelect").value;
 
    let filtered = careers.filter(career => {
