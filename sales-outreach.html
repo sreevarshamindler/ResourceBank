@@ -637,7 +637,7 @@ outline:none;
 </div>
  <!-- Career Cards -->
 
-<div id="resourceGrid"></div>
+<div id="resourceGrid" class="career-grid"></div>
     
 
 </main>
@@ -678,15 +678,15 @@ const resources = [
 
 ];
 
-const careerGrid = document.getElementById("careerGrid");
+const resourceGrid = document.getElementById("resourceGrid");
 
 function renderCards(list){
 
-    careerGrid.innerHTML = "";
+    resourceGrid.innerHTML = "";
 
     list.forEach(resource=>{
 
-        careerGrid.innerHTML += `
+        resourceGrid.innerHTML += `
 
 <div class="career-card">
 
