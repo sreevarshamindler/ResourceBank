@@ -684,7 +684,7 @@ function renderCards(list){
 
     careerGrid.innerHTML = "";
 
-    list.forEach(career=>{
+    list.forEach(resource=>{
 
         careerGrid.innerHTML += `
 
@@ -695,30 +695,53 @@ function renderCards(list){
         <div style="display:flex;align-items:center;">
 
             <div class="card-icon">
-                <i class="fa-solid ${career.icon}"></i>
+                <i class="fa-solid ${resource.icon}"></i>
             </div>
 
             <div class="card-category">
-                <small>${career.category}</small>
-                <h3>${career.title}</h3>
+                <small>${resource.category}</small>
+                <h3>${resource.title}</h3>
             </div>
 
         </div>
 
-        <span class="badge">INFOGRAPHIC</span>
+        <span class="badge">TEMPLATES</span>
 
     </div>
 
     <div class="card-description">
-        ${career.description}
+
+        ${resource.description}
+
+    </div>
+
+    <div style="margin-top:auto;">
+
+        <strong style="
+        color:#17233c;
+        font-size:15px;
+        ">
+            Includes
+        </strong>
+
+        <ul style="
+        margin-top:10px;
+        line-height:1.8;
+        color:#55657f;
+        ">
+
+            ${resource.includes.map(item=>`<li>${item}</li>`).join("")}
+
+        </ul>
+
     </div>
 
     <button
         class="card-button"
-        onclick="window.open('${career.link}','_blank')">
+        onclick="window.location.href='${resource.link}'">
 
-        Open Infographic
-        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        Open Templates
+        <i class="fa-solid fa-arrow-right"></i>
 
     </button>
 
@@ -729,128 +752,6 @@ function renderCards(list){
     });
 
 }
-
-const searchBox = document.getElementById("careerSearch");
-
-searchBox.addEventListener("input", updateResults);
-
-document.getElementById("sortSelect").addEventListener("change", updateResults);
-
-document.getElementById("resourceCount").textContent = careers.length;
-
-updateResults();
-
-function updateResults(){
-
-    const keyword = searchBox.value.trim().toLowerCase();
-
-    const shortKeywords = ["ux", "ai", "ca", "vfx"];
-
-if (
-    keyword.length > 0 &&
-    keyword.length < 3 &&
-    !shortKeywords.includes(keyword)
-) {
-    careerGrid.innerHTML = `
-        <div style="
-            grid-column:1/-1;
-            text-align:center;
-            padding:70px 20px;
-            color:#64748b;
-        ">
-            <i class="fa-solid fa-magnifying-glass" style="
-                font-size:42px;
-                color:#cbd5e1;
-                margin-bottom:18px;
-            "></i>
-
-            <h3 style="
-                margin:0;
-                color:#334155;
-                font-size:22px;
-            ">
-                Keep typing...
-            </h3>
-
-            <p style="
-                margin-top:10px;
-                font-size:16px;
-            ">
-                Enter at least 3 characters to search careers.
-            </p>
-        </div>
-    `;
-    return;
-}
-    const sort = document.getElementById("sortSelect").value;
-
-let filtered = careers.filter(career => {
-
-    if(keyword === "") return true;
-
-    const searchableWords = [
-        ...career.title.toLowerCase().split(/\s+/),
-        ...career.category.toLowerCase().split(/\s+/),
-        ...career.description.toLowerCase().split(/[^a-z0-9&]+/)
-    ];
-
-    return searchableWords.some(word => {
-
-        if(shortKeywords.includes(keyword)){
-            return word === keyword;
-        }
-
-        return word.startsWith(keyword);
-
-    });
-
-});
-
-    filtered.sort((a,b)=>{
-
-        if(sort==="az"){
-            return a.title.localeCompare(b.title);
-        }
-
-        return b.title.localeCompare(a.title);
-
-    });
-if(filtered.length === 0){
-
-    careerGrid.innerHTML = `
-        <div style="
-            grid-column:1/-1;
-            text-align:center;
-            padding:70px 20px;
-            color:#64748b;
-        ">
-            <i class="fa-solid fa-circle-exclamation" style="
-                font-size:42px;
-                color:#cbd5e1;
-                margin-bottom:18px;
-            "></i>
-
-            <h3 style="
-                margin:0;
-                color:#334155;
-            ">
-                No careers found
-            </h3>
-
-            <p style="
-                margin-top:10px;
-            ">
-                Try searching by career name, category or keyword.
-            </p>
-        </div>
-    `;
-
-    return;
-}
-    renderCards(filtered);
-
-}
-
 </script>
 </body>
 
