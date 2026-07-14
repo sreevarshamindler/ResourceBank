@@ -60,11 +60,9 @@ body{
 
 .career-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(420px,420px));
+    grid-template-columns:repeat(2,1fr);
     gap:28px;
-    justify-content:center;
-}
-    
+}    
 .career-card{
 
     background:#fff;
@@ -179,7 +177,7 @@ body{
 .card-button{
 
     width:100%;
-    margin-top:20px;
+    margin-top:auto;
     background:#0b73b9;
 
     color:#fff;
@@ -712,7 +710,7 @@ function renderCards(list){
 
     </div>
 
-    <div style="margin-top:10px;">
+    <div style=" margin-top:20px; flex:1; ">
 
         <strong style="
         color:#17233c;
