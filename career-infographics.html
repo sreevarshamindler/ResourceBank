@@ -877,15 +877,13 @@ searchBox.addEventListener("input", function(){
 
     const keyword = this.value.toLowerCase();
 
-    const filtered = careers.filter(career =>
+const filtered = careers.filter(career =>
 
-        career.title.toLowerCase().includes(keyword) ||
+    career.title.toLowerCase().includes(keyword) ||
 
-        career.category.toLowerCase().includes(keyword) ||
+    career.category.toLowerCase().includes(keyword)
 
-        career.description.toLowerCase().includes(keyword)
-
-    );
+);
 
     renderCards(filtered);
 
