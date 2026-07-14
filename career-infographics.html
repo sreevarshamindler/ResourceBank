@@ -883,13 +883,21 @@ function updateResults(){
     const keyword = searchBox.value.toLowerCase();
     const sort = document.getElementById("sortSelect").value;
 
-    let filtered = careers.filter(career =>
+   let filtered = careers.filter(career => {
 
-        career.title.toLowerCase().includes(keyword) ||
+    if(keyword === "") return true;
 
-        career.category.toLowerCase().includes(keyword)
+    const words = (
+        career.title + " " +
+        career.category + " " +
+        career.description
+    )
+    .toLowerCase()
+    .split(/[^a-z0-9&]+/);
 
-    );
+    return words.some(word => word.startsWith(keyword));
+
+});
 
     filtered.sort((a,b)=>{
 
