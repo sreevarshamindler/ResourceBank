@@ -54,7 +54,161 @@ body{
     color:#0b73b9;
 }
 
+/* ==========================
+   CAREER CARDS
+========================== */
 
+.career-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(360px,1fr));
+    gap:24px;
+}
+
+.career-card{
+
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+    padding:28px;
+
+    transition:.25s;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.career-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 22px rgba(0,0,0,.08);
+}
+
+.card-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:20px;
+}
+
+.card-icon{
+
+    width:54px;
+    height:54px;
+
+    border-radius:12px;
+
+    background:#eef6ff;
+
+    color:#0072bc;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+}
+
+.card-category{
+
+    margin-left:16px;
+
+    flex:1;
+}
+
+.card-category small{
+
+    display:block;
+
+    color:#8b97ab;
+
+    font-size:13px;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    margin-bottom:6px;
+}
+
+.card-category h3{
+
+    margin:0;
+
+    font-size:18px;
+
+    color:#17233c;
+
+    font-weight:700;
+}
+
+.badge{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:600;
+}
+
+.card-description{
+
+    color:#44546f;
+
+    line-height:1.8;
+
+    font-size:16px;
+
+    margin:20px 0 24px;
+}
+
+.card-divider{
+
+    height:1px;
+
+    background:#ececec;
+
+    margin-bottom:22px;
+}
+
+.card-button{
+
+    width:100%;
+
+    background:#0b73b9;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:14px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.card-button:hover{
+
+    background:#095e99;
+}
 /* LAYOUT */
 
 .dashboard{
@@ -498,6 +652,10 @@ flex-shrink:0;
 </select>
 
 </div>
+ <!-- Career Cards -->
+
+<div id="careerGrid" class="career-grid"></div>
+    
 </div>
     
 
@@ -506,7 +664,107 @@ flex-shrink:0;
 
 
 </div>
+<script>
 
+const careers = [
+
+{
+    category:"Technology",
+    title:"UX Design",
+    icon:"fa-desktop",
+    description:"Explore the UX Design journey, key skills, career pathways, job roles and future opportunities through an easy-to-understand visual guide.",
+    link:"#"
+},
+
+{
+    category:"Athletics",
+    title:"Sports",
+    icon:"fa-trophy",
+    description:"Discover careers in sports, coaching, fitness, sports management and emerging opportunities in the global sports industry.",
+    link:"#"
+},
+
+{
+    category:"Healthcare",
+    title:"Psychology",
+    icon:"fa-brain",
+    description:"Explore psychology careers, specializations, counselling pathways and opportunities in behavioural science.",
+    link:"#"
+},
+
+{
+    category:"Business",
+    title:"Marketing",
+    icon:"fa-chart-line",
+    description:"Understand digital marketing, branding, sales, advertising and modern business careers.",
+    link:"#"
+},
+
+{
+    category:"Engineering",
+    title:"Mechanical Engineering",
+    icon:"fa-gears",
+    description:"Explore manufacturing, robotics, automotive engineering and industrial careers.",
+    link:"#"
+}
+
+];
+
+const careerGrid = document.getElementById("careerGrid");
+
+careers.forEach(career=>{
+
+careerGrid.innerHTML += `
+
+<div class="career-card">
+
+    <div class="card-top">
+
+        <div style="display:flex;align-items:center;">
+
+            <div class="card-icon">
+                <i class="fa-solid ${career.icon}"></i>
+            </div>
+
+            <div class="card-category">
+
+                <small>${career.category}</small>
+
+                <h3>${career.title}</h3>
+
+            </div>
+
+        </div>
+
+        <span class="badge">
+            INFOGRAPHIC
+        </span>
+
+    </div>
+
+    <div class="card-description">
+        ${career.description}
+    </div>
+
+    <div class="card-divider"></div>
+
+    <button
+        class="card-button"
+        onclick="window.location='${career.link}'">
+
+        Open Infographic
+
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+    </button>
+
+</div>
+
+`;
+
+});
+
+</script>
 </body>
 
 </html>
