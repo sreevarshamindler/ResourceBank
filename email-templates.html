@@ -646,38 +646,191 @@ const resources = [
 title:"Cold Outreach to Schools",
 audience:"Schools",
 icon:"fa-envelope",
-description:"Introduce your counselling services to schools.",
-link:"https://docs.google.com/document/d/1TUIp-fiu54rN7LOXu-6oidWZ9KrBEHd0P8sSJPUrek0/edit?usp=drive_link",
-target:"_blank"    
+description:"Introduce your career counselling services to schools and invite them for a discussion or demo session.",
+keywords:[
+"school",
+"school outreach",
+"cold email",
+"principal",
+"institution",
+"demo",
+"presentation",
+"partnership",
+"school collaboration",
+"email"
+],
+link:"https://docs.google.com/document/d/1TUIp-fiu54rN7LOXu-6oidWZ9KrBEHd0P8sSJPUrek0/edit?usp=drive_link"
 },
 
 {
 title:"Follow-up After Demo Session",
 audience:"Schools",
 icon:"fa-envelope",
-description:"Thank schools after your demo session.",
-link:"https://docs.google.com/document/d/1Iy0IQm46GUIkZlRLVVkqzPlND6YTonw1l61RS-k6CvE/edit?usp=drive_link",
-target:"_blank"    
+description:"Thank schools after a counselling demo or presentation.",
+keywords:[
+"follow up",
+"demo",
+"school",
+"presentation",
+"meeting",
+"thank you",
+"email",
+"partnership"
+],
+link:"https://docs.google.com/document/d/1Iy0IQm46GUIkZlRLVVkqzPlND6YTonw1l61RS-k6CvE/edit?usp=drive_link"
 },
 
 {
 title:"Student Inquiry Reply",
 audience:"Students",
-icon:"fa-envelope",
-description:"Reply professionally to student enquiries.",
-link:"https://docs.google.com/document/d/1-cTl7UvJYjQrAbCTEZqt_YfuReBKqqxkmCcTG6ojQTw/edit?usp=drive_link",
-target:"_blank"    
+icon:"fa-user-graduate",
+description:"Respond professionally to student enquiries.",
+keywords:[
+"student",
+"inquiry",
+"enquiry",
+"reply",
+"admission",
+"career guidance",
+"course",
+"email",
+"question"
+],
+link:"https://docs.google.com/document/d/1-cTl7UvJYjQrAbCTEZqt_YfuReBKqqxkmCcTG6ojQTw/edit?usp=drive_link"
 },
 
+{
+title:"Parent Consultation Invite",
+audience:"Parents",
+icon:"fa-users",
+description:"Invite parents for a one-to-one counselling consultation.",
+keywords:[
+"parent",
+"consultation",
+"meeting",
+"invite",
+"appointment",
+"career counselling",
+"session"
+],
+link:"https://docs.google.com/document/d/1TBY6zvcqIish3mbncVZt3TjIuvixEEUE6gDJ2ou7xHg/edit?usp=drive_link"
+},
 
-]
+{
+title:"Referral Request (Parent)",
+audience:"Parents",
+icon:"fa-handshake",
+description:"Request parents to refer your counselling services.",
+keywords:[
+"parent referral",
+"referral",
+"recommendation",
+"reference",
+"word of mouth",
+"share",
+"parents"
+],
+link:"https://docs.google.com/document/d/13UFWtygWWXjfUVL_dpJKlSDmtl_CO3pODNuTW8EWwpk/edit?usp=drive_link"
+},
+
+{
+title:"Referral Request (Student)",
+audience:"Students",
+icon:"fa-share-nodes",
+description:"Ask students to recommend your counselling services.",
+keywords:[
+"student referral",
+"friend",
+"classmate",
+"recommend",
+"share",
+"referral",
+"student"
+],
+link:"https://docs.google.com/document/d/1aXzinXg4nH_gmp7ZKN4BHm2E4zR8BXNI5F-YPiyCNJw/edit?usp=drive_link"
+},
+
+{
+title:"Testimonial Request (Parent)",
+audience:"Parents",
+icon:"fa-star",
+description:"Request a testimonial from parents.",
+keywords:[
+"testimonial",
+"review",
+"feedback",
+"parent",
+"rating",
+"experience"
+],
+link:"https://docs.google.com/document/d/1jZx0-Dy46OitF7oEl3bG0rcV4oikiZ2YVCOXqX7LOJk/edit?usp=drive_link"
+},
+
+{
+title:"Testimonial Request (Student)",
+audience:"Students",
+icon:"fa-award",
+description:"Request a testimonial from students.",
+keywords:[
+"testimonial",
+"student",
+"feedback",
+"review",
+"experience",
+"success story"
+],
+link:"https://docs.google.com/document/d/1Srs-TwD3fqXnIJLsuytBXK6xQal1CVP7O3AazFiQl6A/edit?usp=drive_link"
+}
+
+];
 
 const resourceGrid = document.getElementById("resourceGrid");
 
 function renderCards(list){
 
     resourceGrid.innerHTML = "";
+    if(list.length === 0){
 
+    resourceGrid.innerHTML = `
+
+    <div style="
+        grid-column:1/-1;
+        text-align:center;
+        background:#fff;
+        padding:60px;
+        border-radius:16px;
+        border:1px dashed #cfd7e3;
+    ">
+
+        <i class="fa-regular fa-folder-open"
+        style="
+        font-size:48px;
+        color:#9ca3af;
+        margin-bottom:18px;
+        display:block;
+        "></i>
+
+        <h3 style="
+        margin:0;
+        color:#17233c;
+        ">
+            No templates found
+        </h3>
+
+        <p style="
+        margin-top:10px;
+        color:#667085;
+        ">
+            Try another keyword or browse all templates.
+        </p>
+
+    </div>
+
+    `;
+
+    return;
+
+}
     list.forEach(resource=>{
 
         resourceGrid.innerHTML += `
@@ -728,7 +881,7 @@ ${resource.audience}
 
 </div>
     <button class="card-button" style="margin-top:auto;"
-        onclick="window.location.href='${resource.link}'">
+        onclick="window.open('${resource.link}','_blank')">
 
         Open Templates
         <i class="fa-solid fa-arrow-right"></i>
@@ -761,7 +914,11 @@ document.getElementById("resourceCount").textContent = resources.length;
 
         resource.description.toLowerCase().includes(keyword) ||
 
-        resource.audience.toLowerCase().includes(keyword)
+        resource.audience.toLowerCase().includes(keyword) ||
+
+        resource.keywords.some(keyword =>
+    keyword.includes(searchText)
+)
 
     );
 
