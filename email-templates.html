@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Email Templates</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Inter,Arial,sans-serif;
+    background:#f4f7fb;
+}
+
+/* HEADER */
+
+.header{
+    height:70px;
+    background:#fff;
+    border-bottom:1px solid #e5e7eb;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 40px;
+}
+
+.header img{
+    height:34px;
+}
+
+.header nav a{
+
+    text-decoration:none;
+    color:#8b97ab;
+
+    font-size:15px;
+    font-weight:600;
+
+    margin-left:42px;
+}
+
+.header nav a:hover{
+    color:#0b73b9;
+}
+
+/* ==========================
+   CAREER CARDS
+========================== */
+
+.career-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:28px;
+    width:100%;
+}
+.career-card{
+
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+    padding:28px;
+
+    transition:.25s;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+
+    display:flex;
+    flex-direction:column;
+
+    min-height:340px;
+}
+
+.career-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 22px rgba(0,0,0,.08);
+}
+
+.card-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:20px;
+}
+
+.card-icon{
+
+    width:54px;
+    height:54px;
+
+    border-radius:12px;
+
+    background:#eef6ff;
+
+    color:#0072bc;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+}
+
+.card-category{
+
+    margin-left:16px;
+
+    flex:1;
+}
+
+.card-category small{
+
+    display:block;
+
+    color:#8b97ab;
+
+    font-size:13px;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    margin-bottom:6px;
+}
+
+.card-category h3{
+
+    margin:0;
+
+    font-size:18px;
+
+    color:#17233c;
+
+    font-weight:700;
+}
+
+.badge{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:600;
+}
+
+.card-description{
+    color:#44546f;
+    line-height:1.8;
+    font-size:16px;
+    margin:20px 0;
+}
+
+
+.card-button{
+
+    width:100%;
+    margin-top:auto;
+    background:#0b73b9;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:14px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.card-button:hover{
+
+    background:#095e99;
+}
+/* LAYOUT */
+
+.dashboard{
+
+    display:flex;
+
+    height:calc(100vh - 70px);
+    overflow:hidden;
+
+}
+
+
+/* SIDEBAR */
+
+.sidebar{
+
+    width:275px;
+
+    background:#fff;
+
+    border-right:1px solid #e5e7eb;
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.menu-icon-img{
+    width:22px;
+    height:22px;
+    object-fit:contain;
+    flex-shrink:0;
+}
+
+.menu-icon-svg{
+    width:20px;
+    height:20px;
+    fill:#0b73b9;
+    flex-shrink:0;
+}
+.profile{
+
+    padding:18px;
+
+    border-bottom:1px solid #ececec;
+}
+
+.profile select{
+
+    width:100%;
+
+    padding:10px 14px;
+
+    border:1px solid #d9d9d9;
+
+    border-radius:8px;
+
+    background:white;
+
+    font-size:15px;
+}
+
+/* MENU */
+
+.menu{
+
+    list-style:none;
+
+    padding:14px 0;
+
+    margin:0;
+}
+
+.menu li{
+
+    margin:4px 12px;
+}
+
+.menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:#2f4057;
+
+    padding:12px 14px;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    transition:.2s;
+}
+
+.menu a:hover{
+
+    background:#f5f8fb;
+}
+
+.menu .active{
+
+    background:#0b73b9;
+
+    color:white;
+
+    font-weight:600;
+}
+
+/* COACHAPRENEUR CARD */
+
+.promo{
+
+    margin:auto 16px 18px;
+
+    background:#0b73b9;
+
+    color:white;
+
+    border-radius:14px;
+
+    text-align:center;
+
+    padding:28px 18px;
+}
+
+.promo h3{
+
+    margin-top:0;
+
+    font-size:18px;
+}
+
+.promo p{
+
+    font-size:14px;
+
+    line-height:1.5;
+}
+
+.promo button{
+
+    margin-top:14px;
+
+    background:white;
+
+    color:#0b73b9;
+
+    border:none;
+
+    padding:10px 22px;
+
+    border-radius:8px;
+
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+/* MAIN CONTENT */
+
+.main{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:30px 40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <img src="https://mindlerimages.imgix.net/iccc_new/mindler-big-blue.png">
+
+    <nav>
+
+        <a href="index.html">HOME</a>
+
+        <a href="#">FAQs</a>
+
+        <a href="#">CONTACT</a>
+
+    </nav>
+
+</header>
+
+
+<!-- DASHBOARD -->
+
+<div class="dashboard">
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="profile">
+
+            Sree Varsha
+
+    </div>
+
+
+    <ul class="menu">
+
+        <li><a href="#"><img src="https://mindlerimages.imgix.net/iccc_new/ICCC-basic.svg"      class="menu-icon-img"> ICCC Foundation</a></li>
+
+        <li><a href="#"><svg class="menu-icon-svg" viewBox="0 0 512 512">     <path d="M472,16H168a24,24,0,0,0-24,24V344a24,24,0,0,0,24,24H472a24,24,0,0,0,24-24V40A24,24,0,0,0,472,16Zm-8,320H176V48H464Z"></path>     <path d="M112,400V80H80V408a24,24,0,0,0,24,24H432V400Z"></path>     <path d="M48,464V144H16V472a24,24,0,0,0,24,24H368V464Z"></path> </svg> Foundation Resources</a></li>
+
+        <li><a href="#"><img src="https://mindlerimages.imgix.net/iccc_new/ICCC-advanced.svg"              class="menu-icon-img"></i> ICCC Advanced</a></li>
+
+        <li><a href="#"><img src="https://mindlerimages.imgix.net/iccc_new/ICCC-advanced.svg"              class="menu-icon-img"></i> Coachapreneur Program</a></li>
+
+        <li><a href="#"><img src="https://mindlerimages.imgix.net/iccc_new/ICCC-advanced.svg"      class="menu-icon-img"> ICCC Overseas</a></li>
+
+        <li><a href="#"><img src="https://mindlerimages.imgix.net/iccc_new/ICCC-master.svg"      class="menu-icon-img"> ICCC Master</a></li>
+
+        <li>
+
+            <a class="active" href="index.html">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Resource Bank
+
+            </a>
+
+        </li>
+
+        <li><a href="#"><img src="https://mindlerimages.imgix.net/iccc_new/ICCC-master.svg"      class="menu-icon-img"> Take Assessment</a></li>
+
+    </ul>
+
+
+    <div class="promo">
+
+        <h3>Become a Coachapreneur</h3>
+
+        <p>
+
+            Combine ICCC Advanced and Mindler Partner for unbeatable career coaching success.
+
+        </p>
+
+        <button>Learn More</button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+<!-- Back Button -->
+
+<a href="index.html"
+   style="
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:#006bb6;
+      text-decoration:none;
+      font-weight:600;
+      font-size:16px;
+      margin-bottom:26px;
+">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Back to Resource Bank
+
+</a>
+
+
+
+<!-- Header Section -->
+
+<!-- Breadcrumb -->
+
+<div style="
+font-size:15px;
+color:#98a2b3;
+margin-bottom:20px;
+">
+
+    Home
+
+    &nbsp; >
+
+    &nbsp;
+
+    <a href="index.html"
+       style="
+       color:#98a2b3;
+       text-decoration:none;
+       ">
+       Resource Bank
+    </a>
+
+    &nbsp; >
+
+    &nbsp;
+
+    <span style="
+    color:#006bb6;
+    font-weight:600;
+    ">
+        Sales & Outreach
+    </span>
+
+</div>
+
+
+
+
+
+
+<!-- Description -->
+
+<div style="
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+">
+
+    <!-- LEFT -->
+
+    <div style="flex:1;padding-right:40px;">
+
+        <h1 style="
+        margin:0;
+        font-size:31px;
+        font-weight:700;
+        color:#17233c;
+        ">
+           Sales & Outreach
+        </h1>
+
+        <p style="
+        margin-top:14px;
+        font-size:16px;
+        line-height:1.7;
+        color:#44546f;
+        max-width:760px;
+        ">
+Ready-to-use professional email templates for career coaches to communicate effectively with schools, students and parents. Open any template below and make a copy to customize it for your own practice.        </p>
+
+    </div>
+
+    <!-- RIGHT -->
+
+  <div style="
+width:165px;
+height:100px;
+background:#fff;
+border:1px solid #e5e7eb;
+border-radius:18px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+box-shadow:0 3px 10px rgba(0,0,0,.05);
+flex-shrink:0;
+">
+
+    <div style="
+    font-size:14px;
+    color:#6b7280;
+    font-weight:500;
+    ">
+        TOTAL TEMPLATES
+    </div>
+
+    <div id = "resourceCount" style="
+    font-size:44px;
+    font-weight:700;
+    color:#0072bc;
+    line-height:1;
+    margin-top:6px;
+    ">
+        8
+    </div>
+
+</div>
+
+</div>
+<div style="
+display:flex;
+gap:16px;
+align-items:center;
+margin-top:26px;
+margin-bottom:36px;
+">
+
+<input
+id="careerSearch"
+type="text"
+placeholder="Search templates..."
+
+style="
+flex:1;
+width:100%;
+padding:13px 20px;
+font-size:17px;
+border:1px solid #cfd7e3;
+border-radius:10px;
+outline:none;
+">
+
+
+
+</div>
+ <!-- Career Cards -->
+
+<div id="resourceGrid" class="career-grid"></div>
+    
+
+</main>
+
+
+</div>
+<script>
+
+const resources = [
+
+{
+    category:"Communication",
+    title:"Email Templates",
+    icon:"fa-envelope",
+    description:"Ready-to-use professional email templates for schools, students, parents, referrals and follow-ups.",
+    includes:[
+           "School Outreach",
+            "Student Communication",
+            "Parent Communication",
+            "Referrals",
+            "Testimonials"
+
+    ],
+    link:"email-templates.html"
+},
+
+{
+    category:"Communication",
+    title:"WhatsApp Templates",
+    icon:"fa-comments",
+    description:"Quick WhatsApp messages for referrals, testimonials and parent communication.",
+    includes:[
+        "Referral Messages",
+        "Testimonial Requests"
+    ],
+    link:"whatsapp-templates.html"
+}
+
+];
+
+const resourceGrid = document.getElementById("resourceGrid");
+
+function renderCards(list){
+
+    resourceGrid.innerHTML = "";
+
+    list.forEach(resource=>{
+
+        resourceGrid.innerHTML += `
+
+<div class="career-card">
+
+    <div class="card-top">
+
+        <div style="display:flex;align-items:center;">
+
+            <div class="card-icon">
+                <i class="fa-solid ${resource.icon}"></i>
+            </div>
+
+            <div class="card-category">
+                <small>${resource.category}</small>
+                <h3>${resource.title}</h3>
+            </div>
+
+        </div>
+
+        <span class="badge">TEMPLATES</span>
+
+    </div>
+
+    <div class="card-description">
+
+        ${resource.description}
+
+    </div>
+
+    <div style=" margin-top:16px; flex-grow:1; ">
+
+        <strong style="
+        color:#17233c;
+        font-size:15px;
+        ">
+            Includes
+        </strong>
+
+        <ul style="
+        margin-top:10px;
+        line-height:1.8;
+        color:#55657f;
+        ">
+
+            ${resource.includes.map(item=>`<li>${item}</li>`).join("")}
+
+        </ul>
+
+    </div>
+
+    <button class="card-button" style="margin-top:auto;"
+        onclick="window.location.href='${resource.link}'">
+
+        Open Templates
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </button>
+
+</div>
+
+`;
+
+    });
+
+}
+    renderCards(resources);
+
+document.getElementById("resourceCount").textContent = resources.length;
+    document.getElementById("careerSearch").addEventListener("input", function(){
+
+    const keyword = this.value.trim().toLowerCase();
+
+    if(keyword.length < 3){
+
+        renderCards(resources);
+        return;
+    }
+
+    const filtered = resources.filter(resource =>
+
+        resource.title.toLowerCase().includes(keyword) ||
+
+        resource.description.toLowerCase().includes(keyword) ||
+
+        resource.includes.join(" ").toLowerCase().includes(keyword)
+
+    );
+
+    renderCards(filtered);
+
+});
+</script>
+</body>
+
+</html>
