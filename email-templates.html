@@ -597,7 +597,7 @@ flex-shrink:0;
     line-height:1;
     margin-top:6px;
     ">
-        8
+        3
     </div>
 
 </div>
@@ -706,27 +706,24 @@ function renderCards(list){
 
     </div>
 
-    <div style=" margin-top:16px; flex-grow:1; ">
+   <div style="
+margin-top:18px;
+margin-bottom:20px;
+font-size:15px;
+color:#55657f;
+">
 
-        <strong style="
-        color:#17233c;
-        font-size:15px;
-        ">
-            Includes
-        </strong>
+<strong style="
+color:#17233c;
+display:block;
+margin-bottom:6px;
+">
+Audience
+</strong>
 
-        <ul style="
-        margin-top:10px;
-        line-height:1.8;
-        color:#55657f;
-        ">
+${resource.audience}
 
-            ${resource.includes.map(item=>`<li>${item}</li>`).join("")}
-
-        </ul>
-
-    </div>
-
+</div>
     <button class="card-button" style="margin-top:auto;"
         onclick="window.location.href='${resource.link}'">
 
@@ -761,7 +758,7 @@ document.getElementById("resourceCount").textContent = resources.length;
 
         resource.description.toLowerCase().includes(keyword) ||
 
-        resource.includes.join(" ").toLowerCase().includes(keyword)
+        resource.audience.toLowerCase().includes(keyword)
 
     );
 
