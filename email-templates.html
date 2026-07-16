@@ -520,12 +520,24 @@ margin-bottom:20px;
 
     &nbsp;
 
-    <span style="
-    color:#006bb6;
-    font-weight:600;
-    ">
-        Sales & Outreach
-    </span>
+    <a href="sales-outreach.html"
+style="
+color:#98a2b3;
+text-decoration:none;
+">
+Sales & Outreach
+</a>
+
+&nbsp; >
+
+&nbsp;
+
+<span style="
+color:#006bb6;
+font-weight:600;
+">
+Email Templates
+</span>
 
 </div>
 
@@ -552,7 +564,7 @@ align-items:flex-start;
         font-weight:700;
         color:#17233c;
         ">
-           Sales & Outreach
+           Email Templates
         </h1>
 
         <p style="
@@ -814,14 +826,14 @@ function renderCards(list){
         margin:0;
         color:#17233c;
         ">
-            No templates found
+            No matching template found
         </h3>
 
         <p style="
         margin-top:10px;
         color:#667085;
         ">
-            Try another keyword or browse all templates.
+We couldn't find any templates matching your search.
         </p>
 
     </div>
@@ -852,7 +864,9 @@ function renderCards(list){
 
         </div>
 
-        <span class="badge">TEMPLATES</span>
+     <span class="badge">
+${resource.audience}
+</span>
 
     </div>
 
@@ -883,7 +897,7 @@ ${resource.audience}
     <button class="card-button" style="margin-top:auto;"
         onclick="window.open('${resource.link}','_blank')">
 
-        Open Templates
+        Open Template
         <i class="fa-solid fa-arrow-right"></i>
 
     </button>
