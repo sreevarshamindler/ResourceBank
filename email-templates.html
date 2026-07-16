@@ -60,7 +60,7 @@ body{
 
 .career-grid{
     display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-columns:repeat(3,minmax(0,1fr));
     gap:28px;
     width:100%;
 }
@@ -643,34 +643,31 @@ outline:none;
 const resources = [
 
 {
-    category:"Communication",
-    title:"Email Templates",
-    icon:"fa-envelope",
-    description:"Ready-to-use professional email templates for schools, students, parents, referrals and follow-ups.",
-    includes:[
-           "School Outreach",
-            "Student Communication",
-            "Parent Communication",
-            "Referrals",
-            "Testimonials"
-
-    ],
-    link:"email-templates.html"
+title:"Cold Outreach to Schools",
+audience:"Schools",
+icon:"fa-envelope",
+description:"Introduce your counselling services to schools.",
+link:"https://docs.google.com/document/d/1TUIp-fiu54rN7LOXu-6oidWZ9KrBEHd0P8sSJPUrek0/edit?usp=drive_link"
 },
 
 {
-    category:"Communication",
-    title:"WhatsApp Templates",
-    icon:"fa-comments",
-    description:"Quick WhatsApp messages for referrals, testimonials and parent communication.",
-    includes:[
-        "Referral Messages",
-        "Testimonial Requests"
-    ],
-    link:"whatsapp-templates.html"
-}
+title:"Follow-up After Demo Session",
+audience:"Schools",
+icon:"fa-envelope",
+description:"Thank schools after your demo session.",
+link:"https://docs.google.com/document/d/1Iy0IQm46GUIkZlRLVVkqzPlND6YTonw1l61RS-k6CvE/edit?usp=drive_link"
+},
 
-];
+{
+title:"Student Inquiry Reply",
+audience:"Students",
+icon:"fa-envelope",
+description:"Reply professionally to student enquiries.",
+link:"https://docs.google.com/document/d/1-cTl7UvJYjQrAbCTEZqt_YfuReBKqqxkmCcTG6ojQTw/edit?usp=drive_link"
+},
+
+...
+]
 
 const resourceGrid = document.getElementById("resourceGrid");
 
