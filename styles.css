@@ -198,8 +198,10 @@ body{
 ========================= */
 
 .stat-card{
-    width:145px;
-    height:108px;
+    width:132px;
+    height:74px;
+
+    margin-left:24px;
 
     background:#fff;
     border:1px solid #e5e7eb;
@@ -220,12 +222,11 @@ body{
     color:#6b7280;
     font-weight:500;
     text-align:center;
-    white-space:nowrap;
 }
 
 .stat-number{
-    margin-top:8px;
-    font-size:42px;
+    margin-top:4px;
+    font-size:28px;
     font-weight:700;
     color:#0072bc;
     line-height:1;
