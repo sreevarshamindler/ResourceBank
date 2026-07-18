@@ -216,3 +216,91 @@ body{
     font-weight:700;
     color:#0072bc;
 }
+
+/* =========================
+   BACK LINK
+========================= */
+
+.back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:#006bb6;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.back-link:hover{
+    color:#095d98;
+}
+
+
+/* =========================
+   BREADCRUMB
+========================= */
+
+.breadcrumb{
+    font-size:13px;
+    color:#98a2b3;
+    margin-bottom:18px;
+}
+
+.breadcrumb a{
+    color:#98a2b3;
+    text-decoration:none;
+}
+
+.breadcrumb a:hover{
+    color:#006bb6;
+}
+
+.breadcrumb .active{
+    color:#006bb6;
+    font-weight:600;
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:24px;
+    margin-bottom:22px;
+}
+
+.page-header-left{
+    flex:1;
+}
+
+.page-title{
+    margin:0;
+    font-size:25px;
+    font-weight:700;
+    color:#17233c;
+}
+
+.page-description{
+    margin-top:10px;
+    max-width:760px;
+    font-size:14px;
+    line-height:1.7;
+    color:#44546f;
+}
+
+
+/* =========================
+   SEARCH CONTAINER
+========================= */
+
+.search-container{
+    display:flex;
+    gap:16px;
+    align-items:center;
+    margin-bottom:26px;
+}
