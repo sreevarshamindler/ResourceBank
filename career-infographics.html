@@ -59,9 +59,21 @@ body{
 ========================== */
 
 .career-grid{
-   display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
     gap:18px;
+}
+
+@media(max-width:1200px){
+    .career-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+}
+
+@media(max-width:768px){
+    .career-grid{
+        grid-template-columns:1fr;
+    }
 }
 
 .career-card{
@@ -286,26 +298,24 @@ body{
 
 .menu li{
 
-    margin:4px 12px;
+    margin:2px 10px;
 }
 
 .menu a{
 
-display:flex;
-
+    display:flex;
     align-items:center;
-
-    gap:11px;
+    gap:10px;
 
     text-decoration:none;
-
     color:#2f4057;
 
-    padding:10px 12px;
+    padding:9px 12px;
 
-    border-radius:8px;
+    border-radius:10px;
 
-    font-size:13px;
+    font-size:14px;
+    font-weight:500;
 }
 
 .menu a:hover{
@@ -316,10 +326,11 @@ display:flex;
 .menu .active{
 
     background:#0b73b9;
-
-    color:white;
+    color:#fff;
 
     font-weight:600;
+
+    padding:11px 12px;
 }
 
 /* COACHAPRENEUR CARD */
