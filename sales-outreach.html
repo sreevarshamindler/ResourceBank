@@ -164,16 +164,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     background:#095e99;
 }
 
-/* MAIN CONTENT */
-
-.main{
-
-    flex:1;
-
-    overflow-y:auto;
-
-    padding:30px 40px;
-}
 
 </style>
 
@@ -272,17 +262,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <!-- Back Button -->
 
-<a href="index.html"
-   style="
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      color:#006bb6;
-      text-decoration:none;
-      font-weight:600;
-      font-size:16px;
-      margin-bottom:26px;
-">
+<a href="index.html" class="back-link">
 
 <i class="fa-solid fa-arrow-left"></i>
 
@@ -296,11 +276,7 @@ Back to Resource Bank
 
 <!-- Breadcrumb -->
 
-<div style="
-font-size:15px;
-color:#98a2b3;
-margin-bottom:20px;
-">
+<div class="breadcrumb">
 
     Home
 
@@ -308,11 +284,7 @@ margin-bottom:20px;
 
     &nbsp;
 
-    <a href="index.html"
-       style="
-       color:#98a2b3;
-       text-decoration:none;
-       ">
+   <a href="index.html">
        Resource Bank
     </a>
 
@@ -320,10 +292,7 @@ margin-bottom:20px;
 
     &nbsp;
 
-    <span style="
-    color:#006bb6;
-    font-weight:600;
-    ">
+  <span class="active">
         Sales & Outreach
     </span>
 
@@ -336,32 +305,16 @@ margin-bottom:20px;
 
 <!-- Description -->
 
-<div style="
-display:flex;
-justify-content:space-between;
-align-items:flex-start;
-">
+<div class="page-header">
 
     <!-- LEFT -->
 
-    <div style="flex:1;padding-right:40px;">
-
-        <h1 style="
-        margin:0;
-        font-size:31px;
-        font-weight:700;
-        color:#17233c;
-        ">
+<div class="page-header-left">
+        <h1 class="page-title">
            Sales & Outreach
         </h1>
 
-        <p style="
-        margin-top:14px;
-        font-size:16px;
-        line-height:1.7;
-        color:#44546f;
-        max-width:760px;
-        ">
+       <p class="page-description">
             Browse ready-to-use communication templates designed to help career coaches engage students, parents, schools and prospective clients effectively.
         </p>
 
