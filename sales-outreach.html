@@ -23,27 +23,26 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 .career-grid{
     display:grid;
     grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:28px;
+    gap:20px;
     width:100%;
-   @media(max-width:900px){
+}
+
+@media(max-width:900px){
     .career-grid{
         grid-template-columns:1fr;
     }
 }
+   
 .career-card{
-
     background:#fff;
     border:1px solid #e5e7eb;
     border-radius:16px;
-    padding:28px;
-
+    padding:20px;
     transition:.25s;
     box-shadow:0 2px 8px rgba(0,0,0,.05);
-
     display:flex;
     flex-direction:column;
-
-    min-height:340px;
+    min-height:285px;
 }
 
 .career-card:hover{
@@ -61,13 +60,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
     align-items:flex-start;
 
-    margin-bottom:20px;
+    margin-bottom:14px;
 }
 
 .card-icon{
 
-    width:54px;
-    height:54px;
+    width: 42px;
+    height: 42px;
 
     border-radius:12px;
 
@@ -92,31 +91,23 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 }
 
 .card-category small{
-
     display:block;
-
     color:#8b97ab;
-
-    font-size:13px;
-
-    letter-spacing:.08em;
-
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:.12em;
     text-transform:uppercase;
-
-    margin-bottom:6px;
+    margin-bottom:2px;
 }
 
 .card-category h3{
-
     margin:0;
-
     font-size:18px;
-
-    color:#17233c;
-
     font-weight:700;
+    line-height:1.35;
+    color:#17233c;
 }
-
+    
 .badge{
 
     background:#dcfce7;
@@ -134,16 +125,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 .card-description{
     color:#44546f;
-    line-height:1.8;
-    font-size:16px;
-    margin:20px 0;
+    line-height:1.6;
+    font-size:14px;
+    margin:8px 0 12px;
 }
-
-
+    
 .card-button{
 
     width:100%;
-    margin-top:auto;
+    margin-top: 10px;
     background:#0b73b9;
 
     color:#fff;
@@ -429,7 +419,7 @@ function renderCards(list){
 
     </div>
 
-    <div style=" margin-top:16px; flex-grow:1; ">
+    <div style=" margin-top:8px; flex-grow:1; ">
 
         <strong style="
         color:#17233c;
@@ -438,11 +428,12 @@ function renderCards(list){
             Includes
         </strong>
 
-        <ul style="
-        margin-top:10px;
-        line-height:1.8;
-        color:#55657f;
-        ">
+       <ul style="
+         margin-top:6px;
+         line-height:1.6;
+         color:#55657f;
+         font-size:14px;
+      ">
 
             ${resource.includes.map(item=>`<li>${item}</li>`).join("")}
 
